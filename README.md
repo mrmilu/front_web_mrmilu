@@ -30,9 +30,12 @@ yarn watch
 Create folder inside `packages` with it's corresponding `src` folder and `index.ts`
 entrypoint. It should look like this: `packages/my_new_package/src/index.ts`.
 
-Inside package folder run `yarn init`, answer the questions (owner should be always Mr.Milú).
+Inside package folder run `yarn init`, answer the questions (owner should be always Mr.Milú and version
+must match current packages versions).
+
 Once finished run the following command `yarn preconstruct init`, this will modify
 the `package.json` file created by _yarn_ with ES Modules and CommonJS entrypoint for built package.
+
 Finally, add to `package.json` the following property: `"sideEffects: false"`. **Avoid side effects at
 all** between package parts, because with this property we are telling bundlers that code splitting
 can be used between package parts (more info [here](https://stackoverflow.com/a/49203452/3416714)).
