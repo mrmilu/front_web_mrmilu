@@ -5,8 +5,5 @@
   "module": "dist/front_web_mrmilu-services.esm.js",
   "author": "Mr.Milú",
   "license": "MIT",
-  "sideEffects": false,
-  "scripts": {
-    "release": "standard-version"
-  }
+  "sideEffects": false
 }
