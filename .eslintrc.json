@@ -1,0 +1,8 @@
+{
+  "plugins": ["unused-imports", "@typescript-eslint"],
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/consistent-type-imports": "error"
+  }
+}
