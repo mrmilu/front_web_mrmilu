@@ -9,7 +9,7 @@
     "dev": "preconstruct dev",
     "build": "preconstruct build",
     "postinstall": "preconstruct dev",
-    "root:release": "standard-version"
+    "release": "yarn workspaces run release"
   },
   "workspaces": [
     "packages/*"
