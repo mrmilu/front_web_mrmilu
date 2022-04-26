@@ -10,7 +10,8 @@
     "watch": "preconstruct watch",
     "dev": "preconstruct dev",
     "build": "preconstruct build",
-    "postinstall": "preconstruct dev"
+    "postinstall": "preconstruct dev",
+    "commit": "commit"
   },
   "workspaces": [
     "packages/*"
