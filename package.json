@@ -1,8 +1,6 @@
 {
   "name": "front_web_mrmilu",
   "version": "0.1.0",
-  "main": "dist/front_web_mrmilu.cjs.js",
-  "module": "dist/front_web_mrmilu.esm.js",
   "author": "Mr.Milú",
   "license": "MIT",
   "private": true,
@@ -10,8 +8,7 @@
     "watch": "preconstruct watch",
     "dev": "preconstruct dev",
     "build": "preconstruct build",
-    "postinstall": "preconstruct dev",
-    "commit": "commit"
+    "postinstall": "preconstruct dev"
   },
   "workspaces": [
     "packages/*"
