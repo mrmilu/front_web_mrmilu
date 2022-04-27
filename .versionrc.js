@@ -13,5 +13,7 @@ module.exports = {
   bumpFiles: packageDirectories.map((packageDir) => ({
     filename: `${PACKAGES_ROOT_DIR}/${packageDir}/package.json`,
     type: "json"
-  }))
+  })),
+  tagPrefix: "front_web_mrmilu",
+  releaseCommitMessageFormat: "chore(release): front_web_mrmilu@{{currentTag}}"
 };
