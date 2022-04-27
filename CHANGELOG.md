@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/mrmilu/front_web_mrmilu/compare/v0.1.1...v0.1.2) (2022-04-27)
+
+### Features
+
+- **network:** added network package ([cc5dbba](https://github.com/mrmilu/front_web_mrmilu/commit/cc5dbba45e555f8a2fbbdfe1ad23f2ebebe2915a))
+
+### Bug Fixes
+
+- **root:** readdirSync commonjs import ([018229a](https://github.com/mrmilu/front_web_mrmilu/commit/018229a9e59fe15d91484cb5ab374f9640b70e18))
+
 ### [0.1.1](https://github.com/mrmilu/front_web_mrmilu/compare/v0.1.0...v0.1.1) (2022-04-27)
 
 ### Features
