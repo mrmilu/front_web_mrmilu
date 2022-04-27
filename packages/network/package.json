@@ -1,0 +1,19 @@
+{
+  "name": "@front_web_mrmilu/network",
+  "version": "0.1.1",
+  "main": "dist/front_web_mrmilu-network.cjs.js",
+  "module": "dist/front_web_mrmilu-network.esm.js",
+  "author": "Mr.Milú",
+  "license": "MIT",
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  },
+  "devDependencies": {
+    "@apollo/client": "3.6.0",
+    "graphql": "16.4.0"
+  },
+  "peerDependencies": {
+    "@apollo/client": "3.x",
+    "graphql": "16.x"
+  }
+}
