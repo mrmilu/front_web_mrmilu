@@ -13,5 +13,9 @@ module.exports = {
   bumpFiles: packageDirectories.map((packageDir) => ({
     filename: `${PACKAGES_ROOT_DIR}/${packageDir}/package.json`,
     type: "json"
+  })),
+  packageFiles: packageDirectories.map((packageDir) => ({
+    filename: `${PACKAGES_ROOT_DIR}/${packageDir}/package.json`,
+    type: "json"
   }))
 };
