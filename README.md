@@ -75,3 +75,19 @@ generated changelog will show the scope of the commit. The accepted scopes
 are: **root** and any package name without the prefix **@front_web_mrmilu**.
 
 ### Publishing release
+
+First once you have finished your changes and done the commits correctly you
+have to bump package versions and update changelog. This is done automatically
+by running the following command:
+
+```shell
+yarn release
+```
+
+Once **standard version** updates packages versions and changelog you are able to both
+push tags and publish packages. To achieve this do the following:
+
+```shell
+git push origin <tag_name> # git tag to list tag names
+yarn gitpkg-publish
+```

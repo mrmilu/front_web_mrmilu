@@ -10,7 +10,8 @@
     "build": "preconstruct build",
     "patch": "patch-package",
     "postinstall": "yarn patch-package",
-    "release": "standard-version"
+    "release": "standard-version",
+    "gitpkg-publish": "yarn buid && yarn workspaces run gitpkg publish"
   },
   "workspaces": [
     "packages/*"
@@ -32,6 +33,7 @@
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-unused-imports": "2.0.0",
+    "gitpkg": "^1.0.0-beta.2",
     "husky": "7.0.4",
     "lint-staged": "12.3.7",
     "postinstall-postinstall": "2.1.0",
