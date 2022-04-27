@@ -5,10 +5,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "preconstruct watch",
+    "watch": "preconstruct watch --onSuccess='yarn workspace %pkg% yalc-push'",
     "dev": "preconstruct dev",
     "build": "preconstruct build",
-    "postinstall": "preconstruct dev",
+    "postinstall": "patch-package",
     "release": "standard-version"
   },
   "workspaces": [

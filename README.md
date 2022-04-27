@@ -5,6 +5,12 @@ across any Mr.Milú project.
 
 ### Usage
 
+Add [yalc](https://github.com/wclr/yalc) to your computer if don't already have it
+
+```shell
+yarn global add yalc
+```
+
 Install dependencies
 
 ```shell
@@ -13,13 +19,13 @@ yarn
 
 Build packages with any of this **two alternatives**:
 
-- Create files and symlinks in the dist folders
+- Builds packages
 
 ```shell
-yarn dev
+yarn build
 ```
 
-- Build packages and watch for changes (works as `yarn build` but watches for changes)
+- Build packages, watch for changes and pushes to yalc repo.
 
 ```shell
 yarn watch

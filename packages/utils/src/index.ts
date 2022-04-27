@@ -1,3 +1,4 @@
 import CookieUtils from "./cookie";
+import { middlewareGate } from "./next";
 
-export { CookieUtils };
+export { CookieUtils, middlewareGate };

@@ -5,6 +5,10 @@
   "module": "dist/front_web_mrmilu-utils.esm.js",
   "author": "Mr.Milú",
   "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  },
   "devDependencies": {
     "next": "12.1.5",
     "query-string": "7.1.1"

@@ -5,5 +5,8 @@
   "module": "dist/front_web_mrmilu-services.esm.js",
   "author": "Mr.Milú",
   "license": "MIT",
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  }
 }
