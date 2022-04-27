@@ -1,4 +1,4 @@
-import { readdirSync } from "fs";
+const readdirSync = require("fs").readdirSync;
 
 const PACKAGES_ROOT_DIR = `${__dirname}/packages`;
 
