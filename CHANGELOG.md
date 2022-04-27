@@ -6,7 +6,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-- **utils:** added middleware gate function ([8fdef21](https://github.com/mrmilu/front_web_mrmilu/commit/8fdef21cd061c42d35304b47544bc49ed0cae58d))
 - **utils:** added promise and yup extensions ([28982e3](https://github.com/mrmilu/front_web_mrmilu/commit/28982e353d84ba95dd6bb1285b5d9f6707cf6c1e))
 
 ## 0.1.0 (2022-04-27)
