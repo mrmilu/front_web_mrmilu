@@ -8,7 +8,8 @@
     "watch": "preconstruct watch --onSuccess='yarn workspace %pkg% yalc-push'",
     "dev": "preconstruct dev",
     "build": "preconstruct build",
-    "postinstall": "patch-package",
+    "patch": "patch-package",
+    "postinstall": "yarn patch-package",
     "release": "standard-version"
   },
   "workspaces": [
@@ -16,6 +17,7 @@
   ],
   "dependencies": {
     "@babel/core": "7.17.9",
+    "patch-package": "^6.4.7",
     "typescript": "4.6.3"
   },
   "devDependencies": {
@@ -32,7 +34,6 @@
     "eslint-plugin-unused-imports": "2.0.0",
     "husky": "7.0.4",
     "lint-staged": "12.3.7",
-    "patch-package": "6.4.7",
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.0",
     "standard-version": "9.3.2"
