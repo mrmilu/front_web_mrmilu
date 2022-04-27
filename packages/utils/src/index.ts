@@ -1,4 +1,5 @@
 import CookieUtils from "./cookie";
-import { middlewareGate } from "./next";
+import yup from "./yup_extended";
+import { makeCancelable, timeout } from "./promise";
 
-export { CookieUtils, middlewareGate };
+export { CookieUtils, makeCancelable, timeout, yup };

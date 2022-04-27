@@ -10,11 +10,9 @@
     "yalc-push": "yalc push --private"
   },
   "devDependencies": {
-    "next": "12.1.5",
-    "query-string": "7.1.1"
+    "yup": "0.32.11"
   },
   "peerDependencies": {
-    "next": "12.1.5",
-    "query-string": "7.1.1"
+    "yup": "0.x"
   }
 }
