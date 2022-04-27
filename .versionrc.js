@@ -1,5 +1,5 @@
 const readdirSync = require("fs").readdirSync;
-//aaaa
+
 const PACKAGES_ROOT_DIR = `${__dirname}/packages`;
 
 const getDirectories = (source) =>
