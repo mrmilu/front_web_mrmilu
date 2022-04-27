@@ -25,7 +25,8 @@ Build packages with any of this **two alternatives**:
 yarn build
 ```
 
-- Build packages, watch for changes and pushes to yalc repo.
+- Build packages, watch for changes and pushes to yalc repo
+  (it will automatically push changes to yalc)
 
 ```shell
 yarn watch
@@ -33,17 +34,44 @@ yarn watch
 
 ### Add new package
 
-Create folder inside `packages` with it's corresponding `src` folder and `index.ts`
+Create folder inside `packages`, with the package name (without prefix @front_web_mrimilu) and with it's corresponding `src` folder and `index.ts`
 entrypoint. It should look like this: `packages/my_new_package/src/index.ts`.
 
-Inside package folder run `yarn init`, answer the questions (owner should be always Mr.Milú and version
-must match current packages versions).
+Inside package folder run `yarn init`, answer the questions (owner should be always Mr.Milú and **version
+MUST MATCH current packages versions**).
 
 Once finished run the following command `yarn preconstruct init`, this will modify
 the `package.json` file created by _yarn_ with ES Modules and CommonJS entrypoint for built package.
 
-Finally, add to `package.json` the following property: `"sideEffects: false"`. **Avoid side effects at
+Add to `package.json` the following property: `"sideEffects: false"`. **Avoid side effects at
 all** between package parts, because with this property we are telling bundlers that code splitting
 can be used between package parts (more info [here](https://stackoverflow.com/a/49203452/3416714)).
 
+Also, you will need to add the following script that it would be used by `yarn watch`
+to push changes on change:
+
+```json
+{
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  }
+}
+```
+
+Finally, publish the new package to `yalc`. For this enter to the package dir and run
+the following command
+
+```shell
+yalc publish
+```
+
 Now you can develop yor package exporting the desired methods, classes, etc. in the `index.ts` file.
+
+### Committing changes
+
+This project uses **conventional commits** and extends its usage. Each time you make a commit
+it's obligatory to add a scope to your commit. This way when we make a release the automatically
+generated changelog will show the scope of the commit. The accepted scopes
+are: **root** and any package name without the prefix **@front_web_mrmilu**.
+
+### Publishing release

@@ -1,11 +1,4 @@
-const { readdirSync } = require("fs");
-
-const PACKAGES_ROOT_DIR = `${__dirname}/packages`;
-
-const getDirectories = (source) =>
-  readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+const { getDirectories, PACKAGES_ROOT_DIR } = require("./utils/dir");
 
 const packageDirectories = getDirectories(PACKAGES_ROOT_DIR);
 
