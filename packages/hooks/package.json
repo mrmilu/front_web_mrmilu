@@ -1,0 +1,18 @@
+{
+  "name": "@front_web_mrmilu/hooks",
+  "version": "1.0.0",
+  "main": "dist/front_web_mrmilu-hooks.cjs.js",
+  "module": "dist/front_web_mrmilu-hooks.esm.js",
+  "author": "Mr.Milú",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  },
+  "devDependencies": {
+    "react": "18.1.0"
+  },
+  "peerDependencies": {
+    "react": "18.x"
+  }
+}
