@@ -58,7 +58,7 @@ to push changes on change:
 }
 ```
 
-Finally, publish the new package to `yalc`. For this enter to the package dir and run
+Finally, publish the new package to `yalc`. To accomplish this go to the package dir and run
 the following command
 
 ```shell
