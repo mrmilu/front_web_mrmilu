@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.0...v1.1.0) (2022-05-03)
+
+### Features
+
+- **hooks:** added package hooks ([a30a1f2](https://github.com/mrmilu/front_web_mrmilu/commit/a30a1f241a4e9ef3aeda6dfafa0c1a572ed1ef5a))
+
+### Bug Fixes
+
+- **root:** added patch script ([474fd10](https://github.com/mrmilu/front_web_mrmilu/commit/474fd102a08cc62d02fd738838008dcd540b2b70))
+
 ## 1.0.0 (2022-04-27)
 
 ### Features
