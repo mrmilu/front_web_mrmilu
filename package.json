@@ -11,7 +11,7 @@
     "patch": "patch-package",
     "postinstall": "yarn patch-package",
     "release": "standard-version",
-    "gitpkg-publish": "yarn buid && yarn workspaces run gitpkg publish"
+    "gitpkg-publish": "preconstruct build && yarn workspaces run gitpkg publish"
   },
   "workspaces": [
     "packages/*"
