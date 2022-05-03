@@ -88,6 +88,6 @@ Once **standard version** updates packages versions and changelog you are able t
 push tags and publish packages. To achieve this, do the following:
 
 ```shell
-git push origin <tag_name> # git tag to list tag names
+git push --follow-tags origin master
 yarn gitpkg-publish
 ```
