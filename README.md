@@ -72,11 +72,11 @@ Now you can develop yor package exporting the desired methods, classes, etc. in 
 This project uses **conventional commits** and extends its usage. Each time you make a commit
 it's obligatory to add a scope to your commit. This way when we make a release the automatically
 generated changelog will show the scope of the commit. The accepted scopes
-are: **root** and any package name without the prefix **@front_web_mrmilu**.
+are: **root** and any package name **without** the prefix **@front_web_mrmilu**.
 
 ### Publishing release
 
-First once you have finished your changes and done the commits correctly you
+Once you have finished your changes and done the commits correctly you
 have to bump package versions and update changelog. This is done automatically
 by running the following command:
 
@@ -85,7 +85,7 @@ yarn release
 ```
 
 Once **standard version** updates packages versions and changelog you are able to both
-push tags and publish packages. To achieve this do the following:
+push tags and publish packages. To achieve this, do the following:
 
 ```shell
 git push origin <tag_name> # git tag to list tag names
