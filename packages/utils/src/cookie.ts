@@ -24,18 +24,9 @@ export default class CookieUtils {
     document.cookie = name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   }
 
-  static cookieExpiration = (days = 365) => {
+  static cookieExpirationDate = (days = 365) => {
     const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    date.setDate(date.getDate() + days);
     return date;
   };
-
-  static deleteCookieExpiration() {
-    const date = new Date();
-    date.setDate(1);
-    date.setMonth(0);
-    date.setFullYear(1970);
-    date.setHours(0, 0, 1);
-    return date;
-  }
 }
