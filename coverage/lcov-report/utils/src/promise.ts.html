@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.33% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/15</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -96,10 +96,10 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -108,31 +108,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const timeout = <span class="fstat-no" title="function not covered" >(m</span>iliseconds: number) =&gt;
-<span class="cstat-no" title="statement not covered" >  new Promise&lt;void&gt;(<span class="fstat-no" title="function not covered" >(r</span>esolve) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      resolve();</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const timeout = (miliseconds: number) =&gt;
+  new Promise&lt;void&gt;((resolve) =&gt; {
+    setTimeout(() =&gt; {
+      resolve();
     }, miliseconds);
   });
 &nbsp;
@@ -143,22 +143,22 @@ interface CancelablePromise&lt;T&gt; {
   onCancel(callback: () =&gt; void): void;
 }
 &nbsp;
-export const makeCancelable = <span class="fstat-no" title="function not covered" >&lt;T</span>&gt;(promise: Promise&lt;T&gt;): CancelablePromise&lt;T&gt; =&gt; {
-  let hasCanceled = <span class="cstat-no" title="statement not covered" >false;</span>
-  let handleCancel: (() =&gt; void) | null = <span class="cstat-no" title="statement not covered" >null;</span>
+export const makeCancelable = &lt;T&gt;(promise: Promise&lt;T&gt;): CancelablePromise&lt;T&gt; =&gt; {
+  let hasCanceled = false;
+  let handleCancel: (() =&gt; void) | null = null;
 &nbsp;
-  const wrappedPromise = <span class="cstat-no" title="statement not covered" >new Promise&lt;T&gt;(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    promise.then(<span class="fstat-no" title="function not covered" >(v</span>al) =&gt; (<span class="cstat-no" title="statement not covered" >hasCanceled ? handleCancel?.() : resolve(val))</span>);</span>
-<span class="cstat-no" title="statement not covered" >    promise.catch(<span class="fstat-no" title="function not covered" >(e</span>rror) =&gt; (<span class="cstat-no" title="statement not covered" >hasCanceled ? handleCancel?.() : reject(error))</span>);</span>
+  const wrappedPromise = new Promise&lt;T&gt;((resolve, reject) =&gt; {
+    promise.then((val) =&gt; (hasCanceled ? handleCancel?.() : resolve(val)));
+    promise.catch(<span class="fstat-no" title="function not covered" >(e</span>rror) =&gt; (<span class="cstat-no" title="statement not covered" >hasCanceled ? handleCancel?.() : reject(error))</span>);
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return {</span>
+  return {
     promise: wrappedPromise,
-<span class="fstat-no" title="function not covered" >    ca</span>ncel() {
-<span class="cstat-no" title="statement not covered" >      hasCanceled = true;</span>
+    cancel() {
+      hasCanceled = true;
     },
-<span class="fstat-no" title="function not covered" >    on</span>Cancel(callback) {
-<span class="cstat-no" title="statement not covered" >      handleCancel = callback;</span>
+    onCancel(callback) {
+      handleCancel = callback;
     }
   };
 };
@@ -169,7 +169,7 @@ export const makeCancelable = <span class="fstat-no" title="function not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed May 04 2022 17:01:03 GMT+0200 (Central European Summer Time)
+                at Wed May 04 2022 18:36:29 GMT+0200 (Central European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
