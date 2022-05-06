@@ -14,8 +14,9 @@ export default class TagManagerService {
   private readonly dataLayer: Array<unknown> | null = null;
 
   constructor() {
-    if (typeof window !== "undefined" && !window.dataLayer) {
-      this.dataLayer = window.dataLayer || [];
+    if (typeof window !== "undefined") {
+      if (!window.dataLayer) window.dataLayer = window.dataLayer || [];
+      this.dataLayer = window.dataLayer;
     }
   }
 
