@@ -1,11 +1,11 @@
 import { CookieUtils } from "../src";
 
-describe("CookieUtils", () => {
-  describe("getCookie", () => {
+describe("cookie utils", () => {
+  describe("get cookie", () => {
     beforeEach(() => {
       Object.defineProperty(document, "cookie", {
         writable: true,
-        value: "example1=one;example2=two"
+        value: "example1=one;example2=two; example4=four"
       });
     });
 
@@ -15,6 +15,7 @@ describe("CookieUtils", () => {
 
       expect(result).toBe(expected);
     });
+
     it("should get cookie value and be null", () => {
       const result = CookieUtils.getCookie("example3");
 
@@ -22,13 +23,13 @@ describe("CookieUtils", () => {
     });
   });
 
-  it("setCookie should set cookie in document", () => {
+  it("should set cookie in document", () => {
     const expected = "customCookie=customValue";
     CookieUtils.setCookie("customCookie", "customValue");
     expect(document.cookie).toInclude(expected);
   });
 
-  it("eraseCookie should set cookie in document", () => {
+  it("should erase cookie in document", () => {
     const value = "customCookie";
     const staticValue = "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
     const expected = value + staticValue;
@@ -38,7 +39,7 @@ describe("CookieUtils", () => {
     expect(document.cookie).toBe(expected);
   });
 
-  it("cookieExpiration should get Date with corresponding expiration", () => {
+  it("should get cookie expiration Date", () => {
     const dateExpirationYear = new Date().getFullYear() + 1;
     const yearExpiration = CookieUtils.cookieExpirationDate();
     expect(yearExpiration.getFullYear()).toEqual(dateExpirationYear);

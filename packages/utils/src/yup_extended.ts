@@ -7,7 +7,7 @@ yup.addMethod<yup.StringSchema>(yup.string, "isNumber", function (message?: stri
   return this.test("isNumber", message ?? "", (value?: string) => {
     if (value) {
       const number = Number(value);
-      return Number.isNaN(number);
+      return !Number.isNaN(number);
     }
   });
 });
