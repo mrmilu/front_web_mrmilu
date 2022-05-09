@@ -30,8 +30,32 @@ describe("apollo graphql client", () => {
   });
 
   it("should mutate and throw error", async () => {
+    const mockError = new Error("Wrong foo!");
     // @ts-ignore
-    graphqlClient.client.mutate.mockResolvedValueOnce({ data: { errors: ["Wrong foo!"] } });
-    await expect(graphqlClient.mutate(mutation, { body: "Foo", title: "Bar" })).rejects.toEqual(new Error("Wrong foo!"));
+    graphqlClient.client.mutate.mockResolvedValueOnce({ data: { errors: [mockError.message] } });
+    await expect(graphqlClient.mutate(mutation, { body: "Foo", title: "Bar" })).rejects.toEqual(mockError);
+
+    // @ts-ignore
+    graphqlClient.client.mutate.mockResolvedValueOnce({ errors: [mockError] });
+    await expect(graphqlClient.mutate(mutation, { body: "Foo", title: "Bar" })).rejects.toEqual(mockError);
+  });
+
+  it("should query correctly through apollo", async () => {
+    // @ts-ignore
+    graphqlClient.client.query.mockResolvedValueOnce({ data: { foo: "bar" } });
+    await graphqlClient.query(mutation, { body: "Foo", title: "Bar" });
+    // @ts-ignore
+    expect(graphqlClient.client.query).toHaveBeenCalled();
+  });
+
+  it("should query and throw error", async () => {
+    const mockError = new Error("Wrong foo!");
+    // @ts-ignore
+    graphqlClient.client.query.mockResolvedValueOnce({ data: { errors: [mockError.message] } });
+    await expect(graphqlClient.query(mutation, { body: "Foo", title: "Bar" })).rejects.toEqual(mockError);
+
+    // @ts-ignore
+    graphqlClient.client.query.mockResolvedValueOnce({ data: null, errors: [mockError] });
+    await expect(graphqlClient.query(mutation, { body: "Foo", title: "Bar" })).rejects.toEqual(mockError);
   });
 });
