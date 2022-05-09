@@ -4,7 +4,7 @@
  */
 
 export default {
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: ["packages/**/*.(ts|tsx)", "!src/**/*.d.ts", "!**/types/**/*.ts", "!**/dist/**"],
   coverageDirectory: "coverage",
   setupFilesAfterEnv: ["./testSetup.ts"],

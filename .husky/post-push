@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-git commit -am "chore(root): updated test badge" --no-verify
-git push --no-verify

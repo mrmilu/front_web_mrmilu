@@ -13,7 +13,7 @@
     "release": "standard-version",
     "gitpkg-publish": "preconstruct build && yarn workspaces run gitpkg publish",
     "test": "jest",
-    "test:badges": "jest && make-coverage-badge"
+    "test:badges": "jest --collect-coverage && make-coverage-badge && git commit -am \"chore(root): updated test badge\" --no-verify && git push --no-verify"
   },
   "workspaces": [
     "packages/*"
