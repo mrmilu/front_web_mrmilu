@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652087121785" clover="3.2.0">
-  <project timestamp="1652087121785" name="All files">
-    <metrics statements="112" coveredstatements="112" conditionals="67" coveredconditionals="55" methods="38" coveredmethods="37" elements="217" coveredelements="204" complexity="0" loc="112" ncloc="112" packages="5" files="15" classes="15"/>
+<coverage generated="1652093935187" clover="3.2.0">
+  <project timestamp="1652093935187" name="All files">
+    <metrics statements="111" coveredstatements="111" conditionals="65" coveredconditionals="55" methods="37" coveredmethods="37" elements="213" coveredelements="203" complexity="0" loc="111" ncloc="111" packages="5" files="15" classes="15"/>
     <package name="hooks.src">
       <metrics statements="47" coveredstatements="47" conditionals="23" coveredconditionals="19" methods="18" coveredmethods="18"/>
       <file name="async_state.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/async_state.ts">
@@ -124,7 +124,7 @@
       </file>
     </package>
     <package name="utils.src">
-      <metrics statements="36" coveredstatements="36" conditionals="16" coveredconditionals="10" methods="15" coveredmethods="14"/>
+      <metrics statements="35" coveredstatements="35" conditionals="14" coveredconditionals="10" methods="14" coveredmethods="14"/>
       <file name="cookie.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/cookie.ts">
         <metrics statements="18" coveredstatements="18" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="4"/>
         <line num="3" count="1" type="stmt"/>
@@ -150,7 +150,7 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="promise.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/promise.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="9" coveredmethods="8"/>
+        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
@@ -160,10 +160,9 @@
         <line num="17" count="2" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
         <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="2" type="cond" truecount="0" falsecount="2"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
       </file>
       <file name="yup_extended.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/yup_extended.ts">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>

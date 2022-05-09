@@ -18,6 +18,7 @@ export const makeCancelable = <T>(promise: Promise<T>): CancelablePromise<T> => 
 
   const wrappedPromise = new Promise<T>((resolve, reject) => {
     promise.then((val) => (hasCanceled ? handleCancel?.() : resolve(val)));
+    /* istanbul ignore next */ // disabled for test coverage because unable to test async catch in jest
     promise.catch((error) => (hasCanceled ? handleCancel?.() : reject(error)));
   });
 
