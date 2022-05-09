@@ -12,7 +12,8 @@
     "postinstall": "yarn patch-package",
     "release": "standard-version",
     "gitpkg-publish": "preconstruct build && yarn workspaces run gitpkg publish",
-    "test": "jest"
+    "test": "jest",
+    "test:badges": "jest && make-coverage-badge"
   },
   "workspaces": [
     "packages/*"
@@ -33,6 +34,7 @@
     "@preconstruct/cli": "2.1.5",
     "@types/jest": "27.5.0",
     "@typescript-eslint/eslint-plugin": "5.15.0",
+    "css-mediaquery": "^0.1.2",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "8.5.0",
@@ -44,6 +46,7 @@
     "jest-environment-jsdom": "28.0.2",
     "jest-extended": "2.0.0",
     "lint-staged": "12.3.7",
+    "make-coverage-badge": "^1.2.0",
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.0",
     "standard-version": "9.3.2"

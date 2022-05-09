@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-const defaultBreakPoints: Record<BreakpointTypes, number> = {
+const defaultBreakpoints: Record<BreakpointTypes, number> = {
   sm: 480,
   md: 768,
   lg: 1024
@@ -20,7 +20,7 @@ interface BreakpointsMatchHookOutput {
   lgAndUp: boolean;
 }
 
-const useBreakpointsMatch = (breakpoints: Record<BreakpointTypes, number> = defaultBreakPoints): BreakpointsMatchHookOutput => {
+const useBreakpointsMatch = (breakpoints: Record<BreakpointTypes, number> = defaultBreakpoints): BreakpointsMatchHookOutput => {
   const [matchedBreakpoint, setMatchedBreakpoint] = useState<MatchedBreakpoint | null>(null);
 
   const lgAndUp = useMemo(() => matchedBreakpoint === MatchedBreakpoint.LG_AND_UP, [matchedBreakpoint]);

@@ -1,5 +1,7 @@
 ## Front Web Mr.Milú package
 
+![](./coverage/badge.svg)
+
 This package collects a handful amount of methods, classes, interfaces, hooks and more that can and should be reused
 across any Mr.Milú project.
 

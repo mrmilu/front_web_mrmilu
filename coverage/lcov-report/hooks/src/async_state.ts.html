@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,31 +111,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -150,31 +150,31 @@ export interface AsyncStateHookOutput {
   setPromise: (promise: Promise&lt;unknown&gt; | null) =&gt; void;
 }
 &nbsp;
-const useAsyncState = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>elay = <span class="branch-0 cbranch-no" title="branch not covered" >0)</span>: AsyncStateHookOutput =&gt; {</span>
-  const [state, setState] = <span class="cstat-no" title="statement not covered" >useState&lt;AsyncState | undefined&gt;(undefined);</span>
-  const [promise, setInnerPromise] = <span class="cstat-no" title="statement not covered" >useState&lt;Promise&lt;unknown&gt; | null&gt;(null);</span>
+const useAsyncState = (delay = 0): AsyncStateHookOutput =&gt; {
+  const [state, setState] = useState&lt;AsyncState | undefined&gt;(undefined);
+  const [promise, setInnerPromise] = useState&lt;Promise&lt;unknown&gt; | null&gt;(null);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (promise) {</span>
-<span class="cstat-no" title="statement not covered" >      promise</span>
-        .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            setState("resolved");</span>
+  useEffect(() =&gt; {
+    if (promise) {
+      promise
+        .then(() =&gt; {
+          setTimeout(() =&gt; {
+            setState("resolved");
           }, delay);
         })
-        .catch(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            setState("rejected");</span>
+        .catch(() =&gt; {
+          setTimeout(() =&gt; {
+            setState("rejected");
           }, delay);
         });
     }
   }, [delay, promise]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return {</span>
+  return {
     state,
-    setPromise: <span class="fstat-no" title="function not covered" >(p</span>romise: Promise&lt;unknown&gt; | null) =&gt; {
-<span class="cstat-no" title="statement not covered" >      setState("pending");</span>
-<span class="cstat-no" title="statement not covered" >      setInnerPromise(promise);</span>
+    setPromise: (promise: Promise&lt;unknown&gt; | null) =&gt; {
+      setState("pending");
+      setInnerPromise(promise);
     }
   };
 };
@@ -187,7 +187,7 @@ export default useAsyncState;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 09 2022 08:59:06 GMT+0200 (Central European Summer Time)
+                at Mon May 09 2022 10:22:50 GMT+0200 (Central European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
