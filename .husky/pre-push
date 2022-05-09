@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn test:badges && git commit -am "chore(root): updated test badge" --no-verify && git push --no-verify
+git diff HEAD --quiet
+yarn test:badges
