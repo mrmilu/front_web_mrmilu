@@ -32,5 +32,5 @@ jobs:
       - name: Release & publish
         run: |
           yarn release
-          git push --follow-tags origin test-release-action
+          git push --follow-tags origin master
           yarn gitpkg-publish
