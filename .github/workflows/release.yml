@@ -15,8 +15,7 @@ jobs:
         run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git remote set-url origin https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/mrmilu/front_web_mrmilu.git
-
+      #          git remote set-url origin https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/mrmilu/front_web_mrmilu.git
       - name: Setup yarn
         run: npm install -g yarn
 
@@ -31,4 +30,4 @@ jobs:
 
       - name: Release & publish
         run: |
-          yarn release --dry-run
+          yarn release --dry-run --skip.commit --skip.tag

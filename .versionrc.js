@@ -17,7 +17,5 @@ module.exports = {
   packageFiles: packageDirectories.map((packageDir) => ({
     filename: `${PACKAGES_ROOT_DIR}/${packageDir}/package.json`,
     type: "json"
-  })),
-  commitUrlFormat: "{{host}}/{{repository}}/commit/{{hash}}",
-  compareUrlFormat: "{{host}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}"
+  }))
 };
