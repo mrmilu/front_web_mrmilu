@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: git config user
+        run: |
+          git config --global user.name github-actions[bot]
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git remote set-url origin https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/mrmilu/front_web_mrmilu.git
+
+      - name: Setup yarn
+        run: npm install -g yarn
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: "16"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Release & publish
+        run: |
+          yarn release
+          git push --follow-tags origin test-release-action
+          yarn gitpkg-publish

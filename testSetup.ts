@@ -1,7 +1,5 @@
+import "jest-extended/all";
 import mediaQuery from "css-mediaquery";
-import * as matchers from "jest-extended";
-
-expect.extend(matchers);
 
 // Mock window.matchMedia's impl.
 Object.defineProperty(window, "matchMedia", {

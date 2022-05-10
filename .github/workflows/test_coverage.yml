@@ -1,4 +1,4 @@
-name: Test badges
+name: Test coverage
 
 on:
   push:
@@ -10,6 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: git config user
+        run: |
+          git config --global user.name github-actions[bot]
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git remote set-url origin https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/mrmilu/front_web_mrmilu.git
 
       - name: Setup yarn
         run: npm install -g yarn
@@ -27,7 +33,4 @@ jobs:
         run: yarn test:badges
 
       - name: Commit changes
-        uses: EndBug/add-and-commit@v8
-        with:
-          commit: --no-verify
-          message: "chore(root): updated test badge"
+        run: 'git commit -m "chore(root): updated test badge"'
