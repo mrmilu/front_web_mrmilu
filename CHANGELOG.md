@@ -2,13 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 1.0.1 (2022-05-10)
-
-
-### Bug Fixes
-
-* **root:** fixed wrong push branch for tags ([07ff8d8](https://github.com/mrmilu/front_web_mrmilu/commit/07ff8d89c8bfcf1e261bcaf6bfd00a09179b5ab1))
-
 ## 1.0.0 (2022-05-04)
 
 ### Features
