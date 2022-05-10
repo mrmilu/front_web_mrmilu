@@ -13,7 +13,8 @@
     "release": "standard-version",
     "gitpkg-publish": "preconstruct build && yarn workspaces run gitpkg publish",
     "test": "jest",
-    "test:badges": "jest --collect-coverage && make-coverage-badge"
+    "test:badges": "jest --collect-coverage && make-coverage-badge",
+    "skip-ci": "git commit --allow-empty -m \"chore(root): [skip ci]\""
   },
   "workspaces": [
     "packages/*"
