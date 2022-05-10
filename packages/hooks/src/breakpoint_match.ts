@@ -44,6 +44,8 @@ const useBreakpointsMatch = (breakpoints: Record<BreakpointTypes, number> = defa
         setMatchedBreakpoint(MatchedBreakpoint.MD_AND_UP);
       } else if (window.matchMedia(`(min-width: ${breakpoints["sm"]}px)`).matches) {
         setMatchedBreakpoint(MatchedBreakpoint.SM_AND_UP);
+      } else {
+        setMatchedBreakpoint(null);
       }
     }
   }, []);
@@ -54,7 +56,9 @@ const useBreakpointsMatch = (breakpoints: Record<BreakpointTypes, number> = defa
       window.addEventListener("resize", matchMedia);
     }
     return () => {
-      window.removeEventListener("resize", matchMedia);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", matchMedia);
+      }
     };
   }, [matchMedia]);
 

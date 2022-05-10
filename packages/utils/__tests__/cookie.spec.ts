@@ -27,6 +27,15 @@ describe("cookie utils", () => {
     const expected = "customCookie=customValue";
     CookieUtils.setCookie("customCookie", "customValue");
     expect(document.cookie).toInclude(expected);
+
+    CookieUtils.setCookie("customCookie", "customValue", 20);
+    expect(document.cookie).toInclude(expected);
+  });
+
+  it("should not set cookie in document", () => {
+    const expected = "customCookie=customValue";
+    CookieUtils.setCookie("customCookie");
+    expect(document.cookie).not.toInclude(expected);
   });
 
   it("should erase cookie in document", () => {

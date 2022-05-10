@@ -10,5 +10,13 @@ export default {
   setupFilesAfterEnv: ["./testSetup.ts"],
   testEnvironment: "jsdom",
   coverageReporters: ["clover", "json", "json-summary", "lcov", "text"],
-  transform: { "\\.[jt]sx?$": ["babel-jest", { configFile: "./babel_jest.js" }] }
+  transform: { "\\.[jt]sx?$": ["babel-jest", { configFile: "./babel_jest.js" }] },
+  coverageThreshold: {
+    global: {
+      branches: 95,
+      functions: 95,
+      lines: 95,
+      statements: -5
+    }
+  }
 };
