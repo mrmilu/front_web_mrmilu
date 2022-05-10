@@ -9,5 +9,6 @@ export default {
   coverageDirectory: "coverage",
   setupFilesAfterEnv: ["./testSetup.ts"],
   testEnvironment: "jsdom",
-  coverageReporters: ["clover", "json", "json-summary", "lcov", "text"]
+  coverageReporters: ["clover", "json", "json-summary", "lcov", "text"],
+  transform: { "\\.[jt]sx?$": ["babel-jest", { configFile: "./babel_jest.js" }] }
 };
