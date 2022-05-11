@@ -1,7 +1,7 @@
 import type { EffectCallback } from "react";
 import { useEffect, useRef } from "react";
 
-export const useEffectOnce = (effect: EffectCallback) => {
+const useEffectStrictMode = (effect: EffectCallback) => {
   const runEffectOnce = useRef(false);
   const runCleanupOnce = useRef(false);
   const cleanupDestructor = useRef<ReturnType<EffectCallback> | null>(null);
@@ -14,11 +14,17 @@ export const useEffectOnce = (effect: EffectCallback) => {
     }
 
     return () => {
-      if (runCleanupOnce.current && cleanupDestructor.current) {
+      if (process.env.NODE_ENV === "production" && cleanupDestructor.current) {
         cleanupDestructor.current();
+      } else {
+        if (runCleanupOnce.current && cleanupDestructor.current) {
+          cleanupDestructor.current();
+        }
+        runCleanupOnce.current = true;
       }
-      runCleanupOnce.current = true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };
+
+export default useEffectStrictMode;

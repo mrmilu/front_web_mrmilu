@@ -1,6 +1,6 @@
-import { act, renderHook } from "@testing-library/react-hooks";
 import type { BreakpointTypes } from "../src/breakpoint_match";
 import useBreakpointsMatch from "../src/breakpoint_match";
+import { act, renderHook } from "@testing-library/react";
 
 const breakpoints: Record<BreakpointTypes, number> = {
   sm: 1,
