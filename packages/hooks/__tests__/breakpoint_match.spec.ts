@@ -1,6 +1,6 @@
-import { act, renderHook } from "@testing-library/react-hooks";
 import type { BreakpointTypes } from "../src/breakpoint_match";
 import useBreakpointsMatch from "../src/breakpoint_match";
+import { act, renderHook } from "@testing-library/react";
 
 const breakpoints: Record<BreakpointTypes, number> = {
   sm: 1,
@@ -35,22 +35,6 @@ describe("breakpoint match hook", () => {
 
       act(() => window.resizeTo(11, 1000));
       expect(result.current.lgAndUp).toBeTruthy();
-    });
-  });
-
-  describe("without window", () => {
-    const { window } = global;
-    beforeAll(() => {
-      delete global.window;
-    });
-
-    afterAll(() => {
-      global.window = window;
-    });
-
-    it("should not match every breakpoint in resize", () => {
-      const { result } = renderHook(() => useBreakpointsMatch(breakpoints));
-      expect(result.current.smAndUp).toBeFalsy();
     });
   });
 });

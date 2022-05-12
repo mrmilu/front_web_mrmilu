@@ -10,9 +10,11 @@
     "yalc-push": "yalc push --private"
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "8.0.0",
+    "@babel/preset-react": "7.16.7",
+    "@testing-library/react": "13.2.0",
     "@types/react": "18.0.9",
     "react": "18.1.0",
+    "react-dom": "18.1.0",
     "react-test-renderer": "18.1.0"
   },
   "peerDependencies": {

@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/25</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -132,12 +132,9 @@
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
 <a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,24 +154,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">5x</span>
@@ -186,20 +182,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -246,28 +240,25 @@ const useBreakpointsMatch = (breakpoints: Record&lt;BreakpointTypes, number&gt; 
   );
 &nbsp;
   const matchMedia = useCallback(() =&gt; {
-    if (typeof window !== "undefined") {
-      if (window.matchMedia(`(min-width: ${breakpoints["lg"]}px)`).matches) {
-        setMatchedBreakpoint(MatchedBreakpoint.LG_AND_UP);
-      } else if (window.matchMedia(`(min-width: ${breakpoints["md"]}px)`).matches) {
-        setMatchedBreakpoint(MatchedBreakpoint.MD_AND_UP);
-      } else if (window.matchMedia(`(min-width: ${breakpoints["sm"]}px)`).matches) {
-        setMatchedBreakpoint(MatchedBreakpoint.SM_AND_UP);
-      } else {
-        setMatchedBreakpoint(null);
-      }
+    if (window.matchMedia(`(min-width: ${breakpoints["lg"]}px)`).matches) {
+      setMatchedBreakpoint(MatchedBreakpoint.LG_AND_UP);
+    } else if (window.matchMedia(`(min-width: ${breakpoints["md"]}px)`).matches) {
+      setMatchedBreakpoint(MatchedBreakpoint.MD_AND_UP);
+    } else if (window.matchMedia(`(min-width: ${breakpoints["sm"]}px)`).matches) {
+      setMatchedBreakpoint(MatchedBreakpoint.SM_AND_UP);
+    } else {
+      setMatchedBreakpoint(null);
     }
   }, []);
 &nbsp;
   useEffect(() =&gt; {
+    /* istanbul ignore next: ignore coverage because is not possible to test SSR environment with renderHook method of react-testing-library */
+    if (typeof window === "undefined") return () =&gt; {};
+&nbsp;
     matchMedia();
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", matchMedia);
-    }
+    window.addEventListener("resize", matchMedia);
     return () =&gt; {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", matchMedia);
-      }
+      window.removeEventListener("resize", matchMedia);
     };
   }, [matchMedia]);
 &nbsp;
@@ -286,7 +277,7 @@ export default useBreakpointsMatch;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue May 10 2022 11:40:48 GMT+0200 (Central European Summer Time)
+                at Thu May 12 2022 09:39:55 GMT+0200 (Central European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

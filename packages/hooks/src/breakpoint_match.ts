@@ -37,28 +37,25 @@ const useBreakpointsMatch = (breakpoints: Record<BreakpointTypes, number> = defa
   );
 
   const matchMedia = useCallback(() => {
-    if (typeof window !== "undefined") {
-      if (window.matchMedia(`(min-width: ${breakpoints["lg"]}px)`).matches) {
-        setMatchedBreakpoint(MatchedBreakpoint.LG_AND_UP);
-      } else if (window.matchMedia(`(min-width: ${breakpoints["md"]}px)`).matches) {
-        setMatchedBreakpoint(MatchedBreakpoint.MD_AND_UP);
-      } else if (window.matchMedia(`(min-width: ${breakpoints["sm"]}px)`).matches) {
-        setMatchedBreakpoint(MatchedBreakpoint.SM_AND_UP);
-      } else {
-        setMatchedBreakpoint(null);
-      }
+    if (window.matchMedia(`(min-width: ${breakpoints["lg"]}px)`).matches) {
+      setMatchedBreakpoint(MatchedBreakpoint.LG_AND_UP);
+    } else if (window.matchMedia(`(min-width: ${breakpoints["md"]}px)`).matches) {
+      setMatchedBreakpoint(MatchedBreakpoint.MD_AND_UP);
+    } else if (window.matchMedia(`(min-width: ${breakpoints["sm"]}px)`).matches) {
+      setMatchedBreakpoint(MatchedBreakpoint.SM_AND_UP);
+    } else {
+      setMatchedBreakpoint(null);
     }
   }, []);
 
   useEffect(() => {
+    /* istanbul ignore next: ignore coverage because is not possible to test SSR environment with renderHook method of react-testing-library */
+    if (typeof window === "undefined") return () => {};
+
     matchMedia();
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", matchMedia);
-    }
+    window.addEventListener("resize", matchMedia);
     return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", matchMedia);
-      }
+      window.removeEventListener("resize", matchMedia);
     };
   }, [matchMedia]);
 

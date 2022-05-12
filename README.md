@@ -7,7 +7,7 @@ across any Mr.Milú project.
 
 ### Usage
 
-Add [yalc](https://github.com/wclr/yalc) to your computer if don't already have it
+Add [yalc](https://github.com/wclr/yalc) to your computer if you don't already have it
 
 ```shell
 yarn global add yalc
@@ -32,6 +32,30 @@ yarn build
 
 ```shell
 yarn watch
+```
+
+#### Development process
+
+If you want to test a package in your project the best way is to develop under `watch`
+script because it automatically pushes to yalc local repository.
+
+So to stay in sync with the feature you are developing in your project you must
+link to yalc repo even though you have added to your `package.json` the real package depenedency
+
+```json
+{
+  "dependencies": {
+    "@front_web_mrmilu/services": "mrmilu/front_web_mrmilu#@front_web_mrmilu/services-v1.0.1"
+  }
+}
+```
+
+_This is not necessary to develop but if you already have it installed it won't interfere_
+
+To link your package to your project with yalc run the following command
+
+```shell
+yalc link "@front_web_mrmilu/services" # here put the name of your package of choice
 ```
 
 ### Add new package

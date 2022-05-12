@@ -5,12 +5,13 @@
 
 export default {
   collectCoverage: false,
-  collectCoverageFrom: ["packages/**/*.(ts|tsx)", "!src/**/*.d.ts", "!**/types/**/*.ts", "!**/dist/**"],
+  collectCoverageFrom: ["packages/**/*.(ts|tsx)", "!src/**/*.d.ts", "!**/types/**/*.ts", "!**/dist/**", "!**/__tests__/utils/**"],
   coverageDirectory: "coverage",
   setupFilesAfterEnv: ["./testSetup.ts"],
   testEnvironment: "jsdom",
   coverageReporters: ["clover", "json", "json-summary", "lcov", "text"],
   transform: { "\\.[jt]sx?$": ["babel-jest", { configFile: "./babel_jest.js" }] },
+  testPathIgnorePatterns: ["/node_modules/", "/__tests__/utils/"],
   coverageThreshold: {
     global: {
       branches: 95,
