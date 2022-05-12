@@ -1,5 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+node check-master.js
 git diff HEAD --quiet
 yarn test --collect-coverage && git checkout .
