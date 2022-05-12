@@ -1,5 +1,7 @@
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
+import chalk from "chalk";
+const error = chalk.bold.red;
 
 const run = async () => {
   try {
@@ -7,12 +9,12 @@ const run = async () => {
     if (typeof stdout === "string" && stdout.trim() === "master") {
       const { stdout } = await exec("git log -1 --format=%s");
       if (!stdout.includes("chore(root): [skip ci]")) {
-        console.error("You are pushing to master without a [skip-ci] commit message. Please run 'yarn skip-ci' before pushing");
+        console.log(error("You are pushing to master without a [skip-ci] commit message. Please run 'yarn skip-ci' before pushing"));
         process.exit(1);
       }
     }
   } catch (e) {
-    console.error(e);
+    console.log(error(e));
     process.exit(1);
   }
 };
