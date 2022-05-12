@@ -14,7 +14,7 @@ enum MatchedBreakpoint {
   LG_AND_UP
 }
 
-interface BreakpointsMatchHookOutput {
+export interface BreakpointsMatchHookOutput {
   smAndUp: boolean;
   mdAndUp: boolean;
   lgAndUp: boolean;

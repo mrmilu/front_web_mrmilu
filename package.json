@@ -12,6 +12,7 @@
     "postinstall": "yarn patch-package",
     "release": "standard-version",
     "gitpkg-publish": "preconstruct build && yarn workspaces run gitpkg publish",
+    "generate-docs": "yarn workspaces run typedoc",
     "test": "jest",
     "test:badges": "jest --collect-coverage && make-coverage-badge",
     "skip-ci": "git commit --allow-empty -m \"chore(root): [skip ci]\""
@@ -53,7 +54,9 @@
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.2",
     "standard-version": "9.3.2",
-    "ts-node": "^10.7.0"
+    "ts-node": "10.7.0",
+    "typedoc": "0.22.15",
+    "typedoc-plugin-markdown": "3.12.1"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
