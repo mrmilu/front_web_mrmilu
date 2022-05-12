@@ -37,20 +37,4 @@ describe("breakpoint match hook", () => {
       expect(result.current.lgAndUp).toBeTruthy();
     });
   });
-
-  describe("without window", () => {
-    const { window } = global;
-    beforeAll(() => {
-      delete global.window;
-    });
-
-    afterAll(() => {
-      global.window = window;
-    });
-
-    it("should not match every breakpoint in resize", () => {
-      const { result } = renderHook(() => useBreakpointsMatch(breakpoints));
-      expect(result.current.smAndUp).toBeFalsy();
-    });
-  });
 });

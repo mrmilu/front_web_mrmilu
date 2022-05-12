@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652175648145" clover="3.2.0">
-  <project timestamp="1652175648145" name="All files">
-    <metrics statements="112" coveredstatements="112" conditionals="64" coveredconditionals="64" methods="37" coveredmethods="37" elements="213" coveredelements="213" complexity="0" loc="112" ncloc="112" packages="5" files="15" classes="15"/>
+<coverage generated="1652341195087" clover="3.2.0">
+  <project timestamp="1652341195087" name="All files">
+    <metrics statements="124" coveredstatements="124" conditionals="70" coveredconditionals="69" methods="40" coveredmethods="40" elements="234" coveredelements="233" complexity="0" loc="124" ncloc="124" packages="5" files="16" classes="16"/>
     <package name="hooks.src">
-      <metrics statements="49" coveredstatements="49" conditionals="25" coveredconditionals="25" methods="18" coveredmethods="18"/>
+      <metrics statements="61" coveredstatements="61" conditionals="31" coveredconditionals="30" methods="21" coveredmethods="21"/>
       <file name="async_state.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/async_state.ts">
         <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
-        <line num="10" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="6" type="stmt"/>
         <line num="12" count="6" type="stmt"/>
         <line num="14" count="6" type="stmt"/>
@@ -21,36 +21,33 @@
         <line num="34" count="2" type="stmt"/>
       </file>
       <file name="breakpoint_match.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/breakpoint_match.ts">
-        <metrics statements="25" coveredstatements="25" conditionals="18" coveredconditionals="18" methods="7" coveredmethods="7"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="23" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="12" type="stmt"/>
-        <line num="26" count="12" type="stmt"/>
-        <line num="27" count="12" type="stmt"/>
-        <line num="28" count="12" type="cond" truecount="2" falsecount="0"/>
-        <line num="31" count="12" type="stmt"/>
-        <line num="33" count="12" type="cond" truecount="3" falsecount="0"/>
-        <line num="39" count="12" type="stmt"/>
-        <line num="40" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="41" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="42" count="4" type="stmt"/>
-        <line num="43" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="45" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="46" count="2" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="53" count="12" type="stmt"/>
-        <line num="54" count="3" type="stmt"/>
-        <line num="55" count="3" type="cond" truecount="2" falsecount="0"/>
+        <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="23" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
+        <line num="27" count="11" type="stmt"/>
+        <line num="28" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="11" type="stmt"/>
+        <line num="33" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="39" count="11" type="stmt"/>
+        <line num="40" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="51" count="11" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
         <line num="56" count="2" type="stmt"/>
-        <line num="58" count="3" type="stmt"/>
-        <line num="59" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="60" count="2" type="stmt"/>
-        <line num="65" count="12" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="62" count="11" type="stmt"/>
       </file>
       <file name="click_outisde.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/click_outisde.ts">
         <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="cond" truecount="4" falsecount="0"/>
@@ -64,6 +61,24 @@
       </file>
       <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="use_effect_strict_mode.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/use_effect_strict_mode.ts">
+        <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="11" methods="3" coveredmethods="3"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
       </file>
     </package>
     <package name="network.src">
