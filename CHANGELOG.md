@@ -2,38 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.1.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.0...v1.1.1) (2022-05-12)
-
 ## [1.1.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.1...v1.1.0) (2022-05-12)
-
 
 ### Features
 
-* **hooks:** added use effect once hook ([88e57ab](https://github.com/mrmilu/front_web_mrmilu/commit/88e57ab196a06c47735a14705c8d230d94630a67))
-* **root:** updated deps ([e6576bb](https://github.com/mrmilu/front_web_mrmilu/commit/e6576bb383881aa3965f95725becb147159e3073))
-
+- **hooks:** added use effect once hook ([88e57ab](https://github.com/mrmilu/front_web_mrmilu/commit/88e57ab196a06c47735a14705c8d230d94630a67))
+- **root:** updated deps ([e6576bb](https://github.com/mrmilu/front_web_mrmilu/commit/e6576bb383881aa3965f95725becb147159e3073))
 
 ### Bug Fixes
 
-* **hooks:** changed breakpoint_match.ts SSR check logic to make it simple to ignore coverage in test ([0562c00](https://github.com/mrmilu/front_web_mrmilu/commit/0562c007513b1c586ab5b789b7b3bf00bb972797))
-* **root:** fixed eslint colliding versions ([b71eb96](https://github.com/mrmilu/front_web_mrmilu/commit/b71eb96573c0b29000984c723e6655a33b802cbc))
+- **hooks:** changed breakpoint_match.ts SSR check logic to make it simple to ignore coverage in test ([0562c00](https://github.com/mrmilu/front_web_mrmilu/commit/0562c007513b1c586ab5b789b7b3bf00bb972797))
+- **root:** fixed eslint colliding versions ([b71eb96](https://github.com/mrmilu/front_web_mrmilu/commit/b71eb96573c0b29000984c723e6655a33b802cbc))
 
 ### [1.0.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.0...v1.0.1) (2022-05-10)
 
-
 ### Bug Fixes
 
-* **root:** changed husky hooks ([433ca5c](https://github.com/mrmilu/front_web_mrmilu/commit/433ca5cc1b0e61569bc230315745fddff3079d52))
-* **root:** fixed clashing babel config between preconstruct and jest ([ad10e63](https://github.com/mrmilu/front_web_mrmilu/commit/ad10e639b8dd09e013fad9f6af3768739b73c20a))
-* **root:** fixed wrong push branch for tags ([07ff8d8](https://github.com/mrmilu/front_web_mrmilu/commit/07ff8d89c8bfcf1e261bcaf6bfd00a09179b5ab1))
-* **root:** github actiona added node environment ([a5781f0](https://github.com/mrmilu/front_web_mrmilu/commit/a5781f0608924cf9ae8e4fb9212da725fe6b20f7))
-* **root:** husky hook order ([1ca7391](https://github.com/mrmilu/front_web_mrmilu/commit/1ca73915ed5fab5ecc98da75b74976f6a2e57ad5))
-* **root:** missed adding coverage in test workflow ([c17155b](https://github.com/mrmilu/front_web_mrmilu/commit/c17155ba3e5252e749f7004bbc5fb16402184d8d))
-* **root:** removed git commit and push from test:badges ([1a02091](https://github.com/mrmilu/front_web_mrmilu/commit/1a0209148cf1f35dd4b6b3cc35f17b874baab0b3))
-* **root:** worng yml format for workflow ([96bafd4](https://github.com/mrmilu/front_web_mrmilu/commit/96bafd47cd3c22c824bf878603ffad423e80d170))
-* **root:** wrong multiline run ([9cde987](https://github.com/mrmilu/front_web_mrmilu/commit/9cde9873bdb3a294b44023f43bfa99bece2eb3e3))
-* **root:** wrong no verify flag ([d7f41f0](https://github.com/mrmilu/front_web_mrmilu/commit/d7f41f05c56fc42669bd61a786ad676b42e48f1e))
-* **utils:** added yup tests and fixed isNumber validation ([b6198ef](https://github.com/mrmilu/front_web_mrmilu/commit/b6198ef34c0974ac642c7209e8ad63e0abb93075))
+- **root:** changed husky hooks ([433ca5c](https://github.com/mrmilu/front_web_mrmilu/commit/433ca5cc1b0e61569bc230315745fddff3079d52))
+- **root:** fixed clashing babel config between preconstruct and jest ([ad10e63](https://github.com/mrmilu/front_web_mrmilu/commit/ad10e639b8dd09e013fad9f6af3768739b73c20a))
+- **root:** fixed wrong push branch for tags ([07ff8d8](https://github.com/mrmilu/front_web_mrmilu/commit/07ff8d89c8bfcf1e261bcaf6bfd00a09179b5ab1))
+- **root:** github actiona added node environment ([a5781f0](https://github.com/mrmilu/front_web_mrmilu/commit/a5781f0608924cf9ae8e4fb9212da725fe6b20f7))
+- **root:** husky hook order ([1ca7391](https://github.com/mrmilu/front_web_mrmilu/commit/1ca73915ed5fab5ecc98da75b74976f6a2e57ad5))
+- **root:** missed adding coverage in test workflow ([c17155b](https://github.com/mrmilu/front_web_mrmilu/commit/c17155ba3e5252e749f7004bbc5fb16402184d8d))
+- **root:** removed git commit and push from test:badges ([1a02091](https://github.com/mrmilu/front_web_mrmilu/commit/1a0209148cf1f35dd4b6b3cc35f17b874baab0b3))
+- **root:** worng yml format for workflow ([96bafd4](https://github.com/mrmilu/front_web_mrmilu/commit/96bafd47cd3c22c824bf878603ffad423e80d170))
+- **root:** wrong multiline run ([9cde987](https://github.com/mrmilu/front_web_mrmilu/commit/9cde9873bdb3a294b44023f43bfa99bece2eb3e3))
+- **root:** wrong no verify flag ([d7f41f0](https://github.com/mrmilu/front_web_mrmilu/commit/d7f41f05c56fc42669bd61a786ad676b42e48f1e))
+- **utils:** added yup tests and fixed isNumber validation ([b6198ef](https://github.com/mrmilu/front_web_mrmilu/commit/b6198ef34c0974ac642c7209e8ad63e0abb93075))
 
 ## 1.0.0 (2022-05-04)
 
