@@ -7,7 +7,7 @@ across any Mr.Milú project.
 
 ### Usage
 
-Add [yalc](https://github.com/wclr/yalc) to your computer if you don't already have it
+Add [yalc](https://github.com/wclr/yalc) local repository to your computer if you don't already have it
 
 ```shell
 yarn global add yalc
@@ -27,8 +27,7 @@ Build packages with any of this **two alternatives**:
 yarn build
 ```
 
-- Build packages, watch for changes and pushes to yalc repo
-  (it will automatically push changes to yalc)
+- Build packages, watch for changes and automatically pushes to yalc repo
 
 ```shell
 yarn watch
@@ -36,11 +35,11 @@ yarn watch
 
 #### Development process
 
-If you want to test a package in your project the best way is to develop under `watch`
+If you want to test a package in your project, the best way is to develop under `watch`
 script because it automatically pushes to yalc local repository.
 
 So to stay in sync with the feature you are developing in your project you must
-link to yalc repo even though you have added to your `package.json` the real package depenedency
+link to yalc repo even if you have already added the real package to your `package.json`
 
 ```json
 {
@@ -58,22 +57,24 @@ To link your package to your project with yalc run the following command
 yalc link "@front_web_mrmilu/services" # here put the name of your package of choice
 ```
 
+Now your `node_modules` package it's linked to your local yalc repository.
+
 ### Add new package
 
-Create folder inside `packages`, with the package name (without prefix @front_web_mrimilu) and with it's corresponding `src` folder and `index.ts`
+Create a folder inside `packages`, with the package name (without the prefix @front_web_mrimilu) and with it's corresponding `src` folder and `index.ts`
 entrypoint. It should look like this: `packages/my_new_package/src/index.ts`.
 
-Inside package folder run `yarn init`, answer the questions (owner should be always Mr.Milú and **version
-MUST MATCH current packages versions**).
+Inside the package folder run `yarn init`, answer the questions (owner should be always Mr.Milú and **version
+MUST MATCH current packages versions**. For example if all packages are in version `1.0.0` you should answer `1.0.0` to yarn questions).
 
 Once finished run the following command `yarn preconstruct init`, this will modify
-the `package.json` file created by _yarn_ with ES Modules and CommonJS entrypoint for built package.
+the `package.json` file created by _yarn_ with the corresponding ES Modules and CommonJS entrypoint.
 
-Add to `package.json` the following property: `"sideEffects: false"`. **Avoid side effects at
-all** between package parts, because with this property we are telling bundlers that code splitting
-can be used between package parts (more info [here](https://stackoverflow.com/a/49203452/3416714)).
+Then add to the `package.json` the following property: `"sideEffects: false"`. By adding this we are telling bundlers that code splitting
+can be used between package parts, so **avoid side effects at
+all cost** between them (more info [here](https://stackoverflow.com/a/49203452/3416714)).
 
-Also, you will need to add the following script that it would be used by `yarn watch`
+Also, you will need to add the following script, it would be used by `yarn watch`
 to push changes on change:
 
 ```json
@@ -91,16 +92,23 @@ the following command
 yalc publish
 ```
 
-Now you can develop yor package exporting the desired methods, classes, etc. in the `index.ts` file.
+Now you can develop your package by exporting the desired methods, classes, etc. in the `index.ts` file.
 
 ### Committing changes
 
-This project uses **conventional commits** and extends its usage. Each time you make a commit
-it's obligatory to add a scope to your commit. This way when we make a release the automatically
-generated changelog will show the scope of the commit. The accepted scopes
-are: **root** and any package name **without** the prefix **@front_web_mrmilu**.
+This project uses **[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)** with the package [commitlint](https://github.com/conventional-changelog/commitlint)
+and extends its usage. Each time you make a commit it's obligatory to add a **scope** to your commit.
+This way when we make a release the automatically generated changelog will show in which package changes have been made. The accepted scopes
+are: **root** (when changes at root level are made) and any package name (dir name) **without** the prefix **@front_web_mrmilu**.
 
 ### Publishing release
+
+> This process **should not be executed locally** because it's done
+> automatically through a GitHub action when merging to master branch or pushing to it. It is in
+> the README just for documentary purpose.
+> If you want to push to **master** (_which you shouldn't_) without triggering GitHub actions
+> run the command `yarn skip-ci` and then push. This will create an empty commit with the corresponding
+> message telling GitHub to skip action workflows in that commit push.
 
 Once you have finished your changes and done the commits correctly you
 have to bump package versions and update changelog. This is done automatically
@@ -117,3 +125,6 @@ push tags and publish packages. To achieve this, do the following:
 git push --follow-tags origin master
 yarn gitpkg-publish
 ```
+
+Packages in this repo are published as git tags, so the repository works also as a package repository.
+In future versions this could be migrated to a private npm repository.
