@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.1...v1.1.0) (2022-05-12)
+
+
+### Features
+
+* **hooks:** added use effect once hook ([88e57ab](https://github.com/mrmilu/front_web_mrmilu/commit/88e57ab196a06c47735a14705c8d230d94630a67))
+* **root:** updated deps ([e6576bb](https://github.com/mrmilu/front_web_mrmilu/commit/e6576bb383881aa3965f95725becb147159e3073))
+
+
+### Bug Fixes
+
+* **hooks:** changed breakpoint_match.ts SSR check logic to make it simple to ignore coverage in test ([0562c00](https://github.com/mrmilu/front_web_mrmilu/commit/0562c007513b1c586ab5b789b7b3bf00bb972797))
+* **root:** fixed eslint colliding versions ([b71eb96](https://github.com/mrmilu/front_web_mrmilu/commit/b71eb96573c0b29000984c723e6655a33b802cbc))
+
 ### [1.0.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.0...v1.0.1) (2022-05-10)
 
 
