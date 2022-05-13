@@ -85,6 +85,20 @@ to push changes on change:
 }
 ```
 
+Then create a file named `typedoc.json`. This file weill be used by [TypeDoc](https://typedoc.org/) to automatically generate markdown
+documentation based on exported methods, classes and interfaces. Inside this file put the following:
+
+```json
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "../../api-docs/docs/Packages/{Package name with capital case. For example: Network}",
+  "readme": "none",
+  "plugin": "typedoc-plugin-markdown",
+  "entryDocument": "{Package name with capital case. For example: Network}.md",
+  "excludeExternals": true
+}
+```
+
 Finally, publish the new package to `yalc`. To accomplish this go to the package dir and run
 the following command
 
