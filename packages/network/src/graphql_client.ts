@@ -8,6 +8,9 @@ type DataWithError<T> = T & { errors?: Array<string> };
 export type QueryOptions = { fetchPolicy?: FetchPolicy; headers: Record<string, unknown> };
 export type MutationOptions = { fetchPolicy?: MutationFetchPolicy; headers: Record<string, unknown> };
 
+/**
+ * Graphql client abstraction of Apollo client.
+ */
 export default class GraphqlClient {
   private client: ApolloClient<NormalizedCacheObject>;
 
@@ -33,6 +36,12 @@ export default class GraphqlClient {
     });
   }
 
+  /**
+   * Graphql client mutate method
+   * @param mutation
+   * @param variables
+   * @param options
+   */
   async mutate<T, V = Record<string, unknown>>(mutation: DocumentNode, variables?: V, options?: MutationOptions): Promise<T | null | undefined> {
     try {
       const { data, errors } = await this.client.mutate<T>({
@@ -55,6 +64,12 @@ export default class GraphqlClient {
     }
   }
 
+  /**
+   * Graphql client query method
+   * @param query
+   * @param variables
+   * @param options
+   */
   async query<T, V = Record<string, unknown>>(query: DocumentNode, variables?: V, options?: QueryOptions): Promise<T | null | undefined> {
     try {
       const { data, errors } = await this.client.query<T | null | undefined>({
