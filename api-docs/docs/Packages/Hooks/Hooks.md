@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[async_state.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/dde8b62/packages/hooks/src/async_state.ts#L3)
+[async_state.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/hooks/src/async_state.ts#L3)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[breakpoint_match.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/dde8b62/packages/hooks/src/breakpoint_match.ts#L9)
+[breakpoint_match.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/hooks/src/breakpoint_match.ts#L9)
 
 ## Functions
 
@@ -47,7 +47,7 @@
 
 ▸ **useAsyncState**(`delay?`): [`AsyncStateHookOutput`](interfaces/AsyncStateHookOutput.md)
 
-Hook that after a setting an executed promise renders its current state.
+Hook that after setting an executed promise returns its current state.
 
 #### Parameters
 
@@ -61,7 +61,7 @@ Hook that after a setting an executed promise renders its current state.
 
 #### Defined in
 
-[async_state.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/dde8b62/packages/hooks/src/async_state.ts#L14)
+[async_state.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/hooks/src/async_state.ts#L14)
 
 ---
 
@@ -69,11 +69,18 @@ Hook that after a setting an executed promise renders its current state.
 
 ▸ **useBreakpointsMatch**(`breakpoints?`): [`BreakpointsMatchHookOutput`](interfaces/BreakpointsMatchHookOutput.md)
 
+Hook that based on breakpoints detects if viewport matches any of them via window.matchMedia
+Default breakpoints: {
+sm: 480,
+md: 768,
+lg: 1024
+}
+
 #### Parameters
 
-| Name          | Type                                                               | Default value        |
-| :------------ | :----------------------------------------------------------------- | :------------------- |
-| `breakpoints` | `Record`<[`BreakpointTypes`](Hooks.md#breakpointtypes), `number`\> | `defaultBreakpoints` |
+| Name          | Type                                                               | Default value        | Description                                                                  |
+| :------------ | :----------------------------------------------------------------- | :------------------- | :--------------------------------------------------------------------------- |
+| `breakpoints` | `Record`<[`BreakpointTypes`](Hooks.md#breakpointtypes), `number`\> | `defaultBreakpoints` | Record of custom breakpoints corresponding to a set of sizes: sm, md and lg. |
 
 #### Returns
 
@@ -81,7 +88,7 @@ Hook that after a setting an executed promise renders its current state.
 
 #### Defined in
 
-[breakpoint_match.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/dde8b62/packages/hooks/src/breakpoint_match.ts#L23)
+[breakpoint_match.ts:32](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/hooks/src/breakpoint_match.ts#L32)
 
 ---
 
@@ -89,12 +96,14 @@ Hook that after a setting an executed promise renders its current state.
 
 ▸ **useClickOutside**(`ref`, `handler`): `void`
 
+Hook that detects clicks outside an element and executes a handler
+
 #### Parameters
 
-| Name      | Type                         |
-| :-------- | :--------------------------- |
-| `ref`     | `RefObject`<`HTMLElement`\>  |
-| `handler` | (`event`: `Event`) => `void` |
+| Name      | Type                         | Description      |
+| :-------- | :--------------------------- | :--------------- |
+| `ref`     | `RefObject`<`HTMLElement`\>  | React ref object |
+| `handler` | (`event`: `Event`) => `void` | Event handler    |
 
 #### Returns
 
@@ -102,13 +111,15 @@ Hook that after a setting an executed promise renders its current state.
 
 #### Defined in
 
-[click_outisde.ts:4](https://github.com/mrmilu/front_web_mrmilu/blob/dde8b62/packages/hooks/src/click_outisde.ts#L4)
+[click_outisde.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/hooks/src/click_outisde.ts#L9)
 
 ---
 
 ### useEffectStrictMode
 
 ▸ **useEffectStrictMode**(`effect`): `void`
+
+useEffect hook for React 18 in strict mode that executes only ones in development mode
 
 #### Parameters
 
@@ -122,4 +133,4 @@ Hook that after a setting an executed promise renders its current state.
 
 #### Defined in
 
-[use_effect_strict_mode.ts:4](https://github.com/mrmilu/front_web_mrmilu/blob/dde8b62/packages/hooks/src/use_effect_strict_mode.ts#L4)
+[use_effect_strict_mode.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/hooks/src/use_effect_strict_mode.ts#L8)

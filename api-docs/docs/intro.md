@@ -2,46 +2,147 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+![](../../coverage/badge.svg)
 
-## Getting Started
+This package collects a handful amount of methods, classes, interfaces, hooks and more that can and should be reused
+across any Mr.Milú project.
 
-Get started by **creating a new site**.
+### Usage
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Add [yalc](https://github.com/wclr/yalc) local repository to your computer if you don't already have it
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```shell
+yarn global add yalc
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Install dependencies
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```shell
+yarn
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Build packages with any of this **two alternatives**:
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+- Builds packages
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+```shell
+yarn build
+```
+
+- Build packages, watch for changes and automatically pushes to yalc repo
+
+```shell
+yarn watch
+```
+
+#### Development process
+
+If you want to test a package in your project, the best way is to develop under `watch`
+script because it automatically pushes to yalc local repository.
+
+So to stay in sync with the feature you are developing in your project you must
+link to yalc repo even if you have already added the real package to your `package.json`
+
+```json
+{
+  "dependencies": {
+    "@front_web_mrmilu/services": "mrmilu/front_web_mrmilu#@front_web_mrmilu/services-v1.0.1"
+  }
+}
+```
+
+_This is not necessary to develop but if you already have it installed it won't interfere_
+
+To link your package to your project with yalc run the following command
+
+```shell
+yalc link "@front_web_mrmilu/services" # here put the name of your package of choice
+```
+
+Now your `node_modules` package it's linked to your local yalc repository.
+
+### Add new package
+
+Create a folder inside `packages`, with the package name (without the prefix @front_web_mrimilu) and with it's corresponding `src` folder and `index.ts`
+entrypoint. It should look like this: `packages/my_new_package/src/index.ts`.
+
+Inside the package folder run `yarn init`, answer the questions (owner should be always Mr.Milú and **version
+MUST MATCH current packages versions**. For example if all packages are in version `1.0.0` you should answer `1.0.0` to yarn questions).
+
+Once finished run the following command `yarn preconstruct init`, this will modify
+the `package.json` file created by _yarn_ with the corresponding ES Modules and CommonJS entrypoint.
+
+Then add to the `package.json` the following property: `"sideEffects: false"`. By adding this we are telling bundlers that code splitting
+can be used between package parts, so **avoid side effects at
+all cost** between them (more info [here](https://stackoverflow.com/a/49203452/3416714)).
+
+Also, you will need to add the following script, it would be used by `yarn watch`
+to push changes on change:
+
+```json
+{
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  }
+}
+```
+
+Then create a file named `typedoc.json`. This file weill be used by [TypeDoc](https://typedoc.org/) to automatically generate markdown
+documentation based on exported methods, classes and interfaces. Inside this file put the following:
+
+```json
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "../../api-docs/docs/Packages/{Package name with capital case. For example: Network}",
+  "readme": "none",
+  "plugin": "typedoc-plugin-markdown",
+  "entryDocument": "{Package name with capital case. For example: Network}.md",
+  "excludeExternals": true
+}
+```
+
+Finally, publish the new package to `yalc`. To accomplish this go to the package dir and run
+the following command
+
+```shell
+yalc publish
+```
+
+Now you can develop your package by exporting the desired methods, classes, etc. in the `index.ts` file.
+
+### Committing changes
+
+This project uses **[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)** with the package [commitlint](https://github.com/conventional-changelog/commitlint)
+and extends its usage. Each time you make a commit it's obligatory to add a **scope** to your commit.
+This way when we make a release the automatically generated changelog will show in which package changes have been made. The accepted scopes
+are: **root** (when changes at root level are made) and any package name (dir name) **without** the prefix **@front_web_mrmilu**.
+
+### Publishing release
+
+> This process **should not be executed locally** because it's done
+> automatically through a GitHub action when merging to master branch or pushing to it. It is in
+> the README just for documentary purpose.
+> If you want to push to **master** (_which you shouldn't_) without triggering GitHub actions
+> run the command `yarn skip-ci` and then push. This will create an empty commit with the corresponding
+> message telling GitHub to skip action workflows in that commit push.
+
+Once you have finished your changes and done the commits correctly you
+have to bump package versions and update changelog. This is done automatically
+by running the following command:
+
+```shell
+yarn release
+```
+
+Once **standard version** updates packages versions and changelog you are able to both
+push tags and publish packages. To achieve this, do the following:
+
+```shell
+git push --follow-tags origin master
+yarn gitpkg-publish
+```
+
+Packages in this repo are published as git tags, so the repository works also as a package repository.
+In future versions this could be migrated to a private npm repository.
