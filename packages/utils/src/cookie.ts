@@ -1,4 +1,13 @@
+/**
+ * Static class with a set of cookie utils
+ */
 export default class CookieUtils {
+  /**
+   * Sets cookie in document
+   * @param name
+   * @param value
+   * @param days
+   */
   static setCookie(name: string, value = "", days = 365) {
     let expires = "";
     const date = new Date();
@@ -7,6 +16,10 @@ export default class CookieUtils {
     document.cookie = name + "=" + value + expires + "; path=/";
   }
 
+  /**
+   * Gets cookie from document
+   * @param name
+   */
   static getCookie(name: string) {
     const nameEQ = name + "=";
     const ca = document.cookie.split(";");
@@ -18,10 +31,18 @@ export default class CookieUtils {
     return null;
   }
 
+  /**
+   * Erases cookie from document
+   * @param name
+   */
   static eraseCookie(name: string) {
     document.cookie = name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   }
 
+  /**
+   * Generates an expiration date based in a amount of days
+   * @param days
+   */
   static cookieExpirationDate = (days = 365) => {
     const date = new Date();
     date.setDate(date.getDate() + days);

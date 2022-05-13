@@ -1,3 +1,7 @@
+/**
+ * Promised based setTimeout
+ * @param miliseconds
+ */
 export const timeout = (miliseconds: number) =>
   new Promise<void>((resolve) => {
     setTimeout(() => {
@@ -5,13 +9,17 @@ export const timeout = (miliseconds: number) =>
     }, miliseconds);
   });
 
-interface CancelablePromise<T> {
+export interface CancelablePromise<T> {
   promise: Promise<T>;
   cancel(): void;
   // The callback runs when the promise is resolved and has been previously canceled.
   onCancel(callback: () => void): void;
 }
 
+/**
+ * Function that lets you cancel then and catch chain of a promise.
+ * @param promise
+ */
 export const makeCancelable = <T>(promise: Promise<T>): CancelablePromise<T> => {
   let hasCanceled = false;
   let handleCancel: (() => void) | null = null;
