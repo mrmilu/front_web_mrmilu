@@ -3,5 +3,6 @@
   "out": "../../api-docs/docs/Packages/Hooks",
   "readme": "none",
   "plugin": "typedoc-plugin-markdown",
-  "entryDocument": "Hooks.md"
+  "entryDocument": "Hooks.md",
+  "excludeExternals": true
 }

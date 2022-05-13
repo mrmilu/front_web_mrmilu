@@ -1,6 +1,10 @@
 import type { EffectCallback } from "react";
 import { useEffect, useRef } from "react";
 
+/**
+ * useEffect hook for React 18 in strict mode that executes only ones in development mode
+ * @param effect
+ */
 const useEffectStrictMode = (effect: EffectCallback) => {
   const runEffectOnce = useRef(false);
   const runCleanupOnce = useRef(false);

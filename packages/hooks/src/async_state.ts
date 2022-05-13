@@ -8,7 +8,7 @@ export interface AsyncStateHookOutput {
 }
 
 /**
- * Hook that after a setting an executed promise renders its current state.
+ * Hook that after setting an executed promise returns its current state.
  * @param delay Delay to be applied when resolving async state
  */
 const useAsyncState = (delay = 0): AsyncStateHookOutput => {
