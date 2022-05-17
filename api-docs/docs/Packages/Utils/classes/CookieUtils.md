@@ -43,7 +43,7 @@ Generates an expiration date based in a amount of days
 
 #### Defined in
 
-[cookie.ts:46](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/utils/src/cookie.ts#L46)
+[cookie.ts:46](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/cookie.ts#L46)
 
 ---
 
@@ -65,7 +65,7 @@ Erases cookie from document
 
 #### Defined in
 
-[cookie.ts:38](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/utils/src/cookie.ts#L38)
+[cookie.ts:38](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/cookie.ts#L38)
 
 ---
 
@@ -87,7 +87,7 @@ Gets cookie from document
 
 #### Defined in
 
-[cookie.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/utils/src/cookie.ts#L23)
+[cookie.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/cookie.ts#L23)
 
 ---
 
@@ -111,4 +111,4 @@ Sets cookie in document
 
 #### Defined in
 
-[cookie.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/6eec38a/packages/utils/src/cookie.ts#L11)
+[cookie.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/cookie.ts#L11)
