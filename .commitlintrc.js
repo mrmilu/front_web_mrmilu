@@ -1,13 +1,5 @@
-const readdirSync = require("fs").readdirSync;
-
-const PACKAGES_ROOT_DIR = `${__dirname}/packages`;
-
-const getDirectories = (source) =>
-  readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
-
-const packageDirectories = getDirectories(PACKAGES_ROOT_DIR);
+const dirUtils = require("./utils/dir");
+const packageDirectories = dirUtils.getDirectories(dirUtils.PACKAGES_ROOT_DIR);
 
 module.exports = {
   extends: ["@commitlint/config-conventional"],
