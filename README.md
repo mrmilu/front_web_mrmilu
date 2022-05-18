@@ -74,13 +74,18 @@ Then add to the `package.json` the following property: `"sideEffects: false"`. B
 can be used between package parts, so **avoid side effects at
 all cost** between them (more info [here](https://stackoverflow.com/a/49203452/3416714)).
 
-Also, you will need to add the following script, it would be used by `yarn watch`
-to push changes on change:
+Also, you will need to add the following script and `peerDependency`. The script it would be used by `yarn watch`
+to push changes to yalc on change and babel-runtime it will be used by babel-regenerator to add babel helpers
+to your package on runtime:
 
 ```json
 {
   "scripts": {
     "yalc-push": "yalc push --private"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "@babel/runtime": "7.x"
   }
 }
 ```
@@ -93,6 +98,26 @@ yalc publish
 ```
 
 Now you can develop your package by exporting the desired methods, classes, etc. in the `index.ts` file.
+
+Final example of a `package.json` file
+
+```json
+{
+  "name": "@front_web_mrmilu/{packageName}}",
+  "version": "1.1.0",
+  "main": "dist/front_web_mrmilu-{packageName}.cjs.js",
+  "module": "dist/front_web_mrmilu-{packageName}.esm.js",
+  "author": "Mr.Milú",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "yalc-push": "yalc push --private"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "7.x"
+  }
+}
+```
 
 ### Committing changes
 
