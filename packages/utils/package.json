@@ -13,6 +13,7 @@
     "yup": "0.32.11"
   },
   "peerDependencies": {
-    "yup": "0.x"
+    "yup": "0.x",
+    "@babel/runtime": "7.x"
   }
 }
