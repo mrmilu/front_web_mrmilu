@@ -8,5 +8,8 @@
   "sideEffects": false,
   "scripts": {
     "yalc-push": "yalc push --private"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "7.x"
   }
 }
