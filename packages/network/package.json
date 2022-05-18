@@ -5,6 +5,7 @@
   "module": "dist/front_web_mrmilu-network.esm.js",
   "author": "Mr.Milú",
   "license": "MIT",
+  "sideEffects": false,
   "scripts": {
     "yalc-push": "yalc push --private"
   },
@@ -13,6 +14,7 @@
     "graphql": "16.4.0"
   },
   "peerDependencies": {
+    "@babel/runtime": "7.x",
     "@apollo/client": "3.x",
     "graphql": "16.x"
   }
