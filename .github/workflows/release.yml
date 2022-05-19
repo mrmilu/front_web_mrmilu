@@ -32,11 +32,11 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Release & publish
-        run: |
-          yarn release
-          git push --follow-tags origin master
-          yarn gitpkg-publish
+      #      - name: Release & publish
+      #        run: |
+      #          yarn release
+      #          git push --follow-tags origin master
+      #          yarn gitpkg-publish
 
       - name: Generate docs
         run: |
@@ -44,3 +44,27 @@ jobs:
           git add .
           git commit -m "chore(root): updated api-docs"
           git push
+
+      - name: Set env for last tag release
+        run: echo "LAST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+
+      - name: Post to a Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.19.0
+        with:
+          channel-id: "C0BJB6V4P"
+          payload: |
+            {
+              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
