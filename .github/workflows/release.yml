@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  release:
+  release-and-docs:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,3 +37,33 @@ jobs:
           yarn release
           git push --follow-tags origin master
           yarn gitpkg-publish
+
+      - name: Generate docs
+        run: |
+          yarn generate-docs
+          git add .
+          git commit -m "chore(root): updated api-docs"
+          git push
+
+      - name: Set env for last tag release
+        run: echo "LAST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+
+      - name: Post to a Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.19.0
+        with:
+          channel-id: "C0BJB6V4P"
+          payload: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "New release :rocket: :rocket:\n*<https://github.com/mrmilu/front_web_mrmilu/blob/master/CHANGELOG.md|${{ env.LAST_TAG }}>*"
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

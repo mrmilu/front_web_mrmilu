@@ -10,6 +10,9 @@ declare global {
   }
 }
 
+/**
+ * Google tag manager service for sending events to data layer
+ */
 export default class TagManagerService {
   private readonly dataLayer: Array<unknown> | null = null;
 
@@ -20,6 +23,11 @@ export default class TagManagerService {
     }
   }
 
+  /**
+   * Tag manager push to data layer method
+   * @param name
+   * @param parameters
+   */
   sendEvent(name: string, parameters?: Record<string, string>): void {
     if (this.dataLayer) {
       this.dataLayer.push({ event: name, ...parameters });

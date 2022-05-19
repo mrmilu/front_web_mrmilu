@@ -1,0 +1,8 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "../../api-docs/docs/Packages/Utils",
+  "readme": "none",
+  "plugin": "typedoc-plugin-markdown",
+  "entryDocument": "Utils.md",
+  "excludeExternals": true
+}

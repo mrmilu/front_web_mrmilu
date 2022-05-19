@@ -14,12 +14,21 @@ enum MatchedBreakpoint {
   LG_AND_UP
 }
 
-interface BreakpointsMatchHookOutput {
+export interface BreakpointsMatchHookOutput {
   smAndUp: boolean;
   mdAndUp: boolean;
   lgAndUp: boolean;
 }
 
+/**
+ * Hook that based on breakpoints detects if viewport matches any of them via window.matchMedia.
+ * Default breakpoints: {
+ *   sm: 480,
+ *   md: 768,
+ *   lg: 1024
+ * }
+ * @param {Object} breakpoints - Record of custom breakpoints corresponding to a set of sizes: sm, md and lg.
+ */
 const useBreakpointsMatch = (breakpoints: Record<BreakpointTypes, number> = defaultBreakpoints): BreakpointsMatchHookOutput => {
   const [matchedBreakpoint, setMatchedBreakpoint] = useState<MatchedBreakpoint | null>(null);
 

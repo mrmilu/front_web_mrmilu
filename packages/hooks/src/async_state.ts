@@ -7,6 +7,10 @@ export interface AsyncStateHookOutput {
   setPromise: (promise: Promise<unknown> | null) => void;
 }
 
+/**
+ * Hook that after setting an executed promise returns its current state.
+ * @param delay Delay to be applied when resolving async state
+ */
 const useAsyncState = (delay = 0): AsyncStateHookOutput => {
   const [state, setState] = useState<AsyncState | undefined>(undefined);
   const [promise, setInnerPromise] = useState<Promise<unknown> | null>(null);
