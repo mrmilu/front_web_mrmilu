@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  release:
+  release-and-docs:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,3 +37,10 @@ jobs:
           yarn release
           git push --follow-tags origin master
           yarn gitpkg-publish
+
+      - name: Generate docs
+        run: |
+          yarn generate-docs
+          git add .
+          git commit -m "chore(root): updated api-docs"
+          git push
