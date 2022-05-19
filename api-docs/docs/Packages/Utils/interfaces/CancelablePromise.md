@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[promise.ts:13](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/promise.ts#L13)
+[promise.ts:13](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/utils/src/promise.ts#L13)
 
 ## Methods
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[promise.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/promise.ts#L14)
+[promise.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/utils/src/promise.ts#L14)
 
 ---
 
@@ -61,4 +61,4 @@
 
 #### Defined in
 
-[promise.ts:16](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/utils/src/promise.ts#L16)
+[promise.ts:16](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/utils/src/promise.ts#L16)

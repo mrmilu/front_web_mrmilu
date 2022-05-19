@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[async_state.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/async_state.ts#L3)
+[async_state.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/async_state.ts#L3)
 
 ---
 
@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[breakpoint_match.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/breakpoint_match.ts#L9)
+[breakpoint_match.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/breakpoint_match.ts#L9)
 
 ## Functions
 
@@ -61,7 +61,7 @@ Hook that after setting an executed promise returns its current state.
 
 #### Defined in
 
-[async_state.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/async_state.ts#L14)
+[async_state.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/async_state.ts#L14)
 
 ---
 
@@ -88,7 +88,7 @@ lg: 1024
 
 #### Defined in
 
-[breakpoint_match.ts:32](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/breakpoint_match.ts#L32)
+[breakpoint_match.ts:32](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/breakpoint_match.ts#L32)
 
 ---
 
@@ -111,7 +111,7 @@ Hook that detects clicks outside an element and executes a handler
 
 #### Defined in
 
-[click_outisde.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/click_outisde.ts#L9)
+[click_outisde.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/click_outisde.ts#L9)
 
 ---
 
@@ -133,4 +133,4 @@ useEffect hook for React 18 in strict mode that executes only ones in developmen
 
 #### Defined in
 
-[use_effect_strict_mode.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/use_effect_strict_mode.ts#L8)
+[use_effect_strict_mode.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/use_effect_strict_mode.ts#L8)

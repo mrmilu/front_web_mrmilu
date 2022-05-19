@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[breakpoint_match.ts:20](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/breakpoint_match.ts#L20)
+[breakpoint_match.ts:20](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/breakpoint_match.ts#L20)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[breakpoint_match.ts:19](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/breakpoint_match.ts#L19)
+[breakpoint_match.ts:19](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/breakpoint_match.ts#L19)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[breakpoint_match.ts:18](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/hooks/src/breakpoint_match.ts#L18)
+[breakpoint_match.ts:18](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/hooks/src/breakpoint_match.ts#L18)

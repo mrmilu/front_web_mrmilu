@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[graphql_client.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/network/src/graphql_client.ts#L9)
+[graphql_client.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/network/src/graphql_client.ts#L9)
 
 ---
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[graphql_client.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/84d55b2/packages/network/src/graphql_client.ts#L8)
+[graphql_client.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/network/src/graphql_client.ts#L8)
