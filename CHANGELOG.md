@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.1...v1.2.0) (2022-05-19)
+
+
+### Features
+
+* **hooks:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([b3e9fad](https://github.com/mrmilu/front_web_mrmilu/commit/b3e9fad3d01f17f59db2c6a4a2c5913f0269a906))
+* **network:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([bef0591](https://github.com/mrmilu/front_web_mrmilu/commit/bef0591a43284bb4474aed9dcaa0c33ec6a73af8))
+* **root:** added docosaurus to show auto generated typedoc markdown files ([0c58f9d](https://github.com/mrmilu/front_web_mrmilu/commit/0c58f9dd1cbb791340d8fd192b1c6cf19f084ffc))
+* **utils:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([23ccd6a](https://github.com/mrmilu/front_web_mrmilu/commit/23ccd6af8c4f9f3cb741caaad8beeae93536811e))
+
+
+### Bug Fixes
+
+* **root:** added to github action test_coverage fetch-depth 0 ([519bfc5](https://github.com/mrmilu/front_web_mrmilu/commit/519bfc5b3047c57a930388e8e37621c5735b82ec))
+
 ### [1.1.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.0...v1.1.1) (2022-05-18)
 
 
