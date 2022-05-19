@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.0...v1.1.1) (2022-05-18)
+
+
+### Bug Fixes
+
+* **hooks:** added @babel/runtime as peerDepedency ([7006e38](https://github.com/mrmilu/front_web_mrmilu/commit/7006e38c0e26c576375aad04fb78a90345a59d5a))
+* **network:** added @babel/runtime as peerDepedency ([5af316d](https://github.com/mrmilu/front_web_mrmilu/commit/5af316daa53b4162c00a723400d9e105a4688187))
+* **root:** removed babel-runtime from root, completed readme and added babel-runtime to babel config ([1371e54](https://github.com/mrmilu/front_web_mrmilu/commit/1371e54e4662ef687e63fb59b762246defedb867))
+* **services:** added @babel/runtime as peerDepedency ([c74b545](https://github.com/mrmilu/front_web_mrmilu/commit/c74b545526cc75d8fd6a188536ccefa23d53c8bd))
+* **utils:** added @babel/runtime as peerDepedency ([1c9acfa](https://github.com/mrmilu/front_web_mrmilu/commit/1c9acfa29d8d3af3e9d606b50cb4ccee1b6ad566))
+
 ## [1.1.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.1...v1.1.0) (2022-05-12)
 
 ### Features
