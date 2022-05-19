@@ -19,17 +19,17 @@
 
 #### Type parameters
 
-| Name | Type                           |
-| :--- | :----------------------------- |
-| `T`  | `T`                            |
-| `V`  | `Record`<`string`, `unknown`\> |
+| Name | Type |
+| :------ | :------ |
+| `T` | `T` |
+| `V` | `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name         | Type           |
-| :----------- | :------------- |
-| `mutation`   | `DocumentNode` |
-| `variables?` | `V`            |
+| Name | Type |
+| :------ | :------ |
+| `mutation` | `DocumentNode` |
+| `variables?` | `V` |
 
 #### Returns
 
@@ -37,9 +37,9 @@
 
 #### Defined in
 
-[interfaces/graphql_data_source.ts:4](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/network/src/interfaces/graphql_data_source.ts#L4)
+[interfaces/graphql_data_source.ts:4](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/graphql_data_source.ts#L4)
 
----
+___
 
 ### query
 
@@ -47,17 +47,17 @@
 
 #### Type parameters
 
-| Name | Type                           |
-| :--- | :----------------------------- |
-| `T`  | `T`                            |
-| `V`  | `Record`<`string`, `unknown`\> |
+| Name | Type |
+| :------ | :------ |
+| `T` | `T` |
+| `V` | `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name         | Type           |
-| :----------- | :------------- |
-| `query`      | `DocumentNode` |
-| `variables?` | `V`            |
+| Name | Type |
+| :------ | :------ |
+| `query` | `DocumentNode` |
+| `variables?` | `V` |
 
 #### Returns
 
@@ -65,4 +65,4 @@
 
 #### Defined in
 
-[interfaces/graphql_data_source.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/f23b242/packages/network/src/interfaces/graphql_data_source.ts#L5)
+[interfaces/graphql_data_source.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/graphql_data_source.ts#L5)
