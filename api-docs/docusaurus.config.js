@@ -9,7 +9,7 @@ const config = {
   title: "Front Web Mr.Milú's package",
   tagline: "Handful amount of methods, classes, interfaces, hooks and more.",
   url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  baseUrl: "/front_web_mrmilu/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
