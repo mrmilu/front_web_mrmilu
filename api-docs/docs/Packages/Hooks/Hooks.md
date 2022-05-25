@@ -25,21 +25,21 @@
 
 ### AsyncState
 
-Ƭ **AsyncState**: ``"resolved"`` \| ``"pending"`` \| ``"rejected"``
+Ƭ **AsyncState**: `"resolved"` \| `"pending"` \| `"rejected"`
 
 #### Defined in
 
-[async_state.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/hooks/src/async_state.ts#L3)
+[async_state.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/async_state.ts#L3)
 
-___
+---
 
 ### BreakpointTypes
 
-Ƭ **BreakpointTypes**: ``"sm"`` \| ``"md"`` \| ``"lg"``
+Ƭ **BreakpointTypes**: `"sm"` \| `"md"` \| `"lg"`
 
 #### Defined in
 
-[breakpoint_match.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/hooks/src/breakpoint_match.ts#L9)
+[breakpoint_match.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/breakpoint_match.ts#L9)
 
 ## Functions
 
@@ -51,9 +51,9 @@ Hook that after setting an executed promise returns its current state.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `delay` | `number` | `0` | Delay to be applied when resolving async state |
+| Name    | Type     | Default value | Description                                    |
+| :------ | :------- | :------------ | :--------------------------------------------- |
+| `delay` | `number` | `0`           | Delay to be applied when resolving async state |
 
 #### Returns
 
@@ -61,9 +61,9 @@ Hook that after setting an executed promise returns its current state.
 
 #### Defined in
 
-[async_state.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/hooks/src/async_state.ts#L14)
+[async_state.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/async_state.ts#L14)
 
-___
+---
 
 ### useBreakpointsMatch
 
@@ -71,15 +71,15 @@ ___
 
 Hook that based on breakpoints detects if viewport matches any of them via window.matchMedia.
 Default breakpoints: {
-  sm: 480,
-  md: 768,
-  lg: 1024
+sm: 480,
+md: 768,
+lg: 1024
 }
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
+| Name          | Type                                                               | Default value        | Description                                                                  |
+| :------------ | :----------------------------------------------------------------- | :------------------- | :--------------------------------------------------------------------------- |
 | `breakpoints` | `Record`<[`BreakpointTypes`](Hooks.md#breakpointtypes), `number`\> | `defaultBreakpoints` | Record of custom breakpoints corresponding to a set of sizes: sm, md and lg. |
 
 #### Returns
@@ -88,9 +88,9 @@ Default breakpoints: {
 
 #### Defined in
 
-[breakpoint_match.ts:32](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/hooks/src/breakpoint_match.ts#L32)
+[breakpoint_match.ts:32](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/breakpoint_match.ts#L32)
 
-___
+---
 
 ### useClickOutside
 
@@ -100,10 +100,10 @@ Hook that detects clicks outside an element and executes a handler
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `ref` | `RefObject`<`HTMLElement`\> | React ref object |
-| `handler` | (`event`: `Event`) => `void` | Event handler |
+| Name      | Type                         | Description      |
+| :-------- | :--------------------------- | :--------------- |
+| `ref`     | `RefObject`<`HTMLElement`\>  | React ref object |
+| `handler` | (`event`: `Event`) => `void` | Event handler    |
 
 #### Returns
 
@@ -111,9 +111,9 @@ Hook that detects clicks outside an element and executes a handler
 
 #### Defined in
 
-[click_outisde.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/hooks/src/click_outisde.ts#L9)
+[click_outisde.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/click_outisde.ts#L9)
 
-___
+---
 
 ### useEffectStrictMode
 
@@ -123,8 +123,8 @@ useEffect hook for React 18 in strict mode that executes only ones in developmen
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type             |
+| :------- | :--------------- |
 | `effect` | `EffectCallback` |
 
 #### Returns
@@ -133,4 +133,4 @@ useEffect hook for React 18 in strict mode that executes only ones in developmen
 
 #### Defined in
 
-[use_effect_strict_mode.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/hooks/src/use_effect_strict_mode.ts#L8)
+[use_effect_strict_mode.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/use_effect_strict_mode.ts#L8)

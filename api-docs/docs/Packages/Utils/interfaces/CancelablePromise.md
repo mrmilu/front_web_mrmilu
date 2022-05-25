@@ -5,8 +5,8 @@
 ## Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 ## Table of contents
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[promise.ts:13](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/utils/src/promise.ts#L13)
+[promise.ts:13](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/promise.ts#L13)
 
 ## Methods
 
@@ -41,9 +41,9 @@
 
 #### Defined in
 
-[promise.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/utils/src/promise.ts#L14)
+[promise.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/promise.ts#L14)
 
-___
+---
 
 ### onCancel
 
@@ -51,8 +51,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type         |
+| :--------- | :----------- |
 | `callback` | () => `void` |
 
 #### Returns
@@ -61,4 +61,4 @@ ___
 
 #### Defined in
 
-[promise.ts:16](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/utils/src/promise.ts#L16)
+[promise.ts:16](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/promise.ts#L16)

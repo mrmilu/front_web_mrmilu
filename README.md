@@ -5,6 +5,8 @@
 This package collects a handful amount of methods, classes, interfaces, hooks and more that can and should be reused
 across any Mr.Milú project.
 
+### [API Docs](https://mrmilu.github.io/front_web_mrmilu/)
+
 ### Usage
 
 Add [yalc](https://github.com/wclr/yalc) local repository to your computer if you don't already have it

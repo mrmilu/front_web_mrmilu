@@ -23,14 +23,14 @@
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
+| Name       | Type                                            |
+| :--------- | :---------------------------------------------- |
+| `url`      | `string`                                        |
 | `options?` | [`GetOptions`](NetworkInterfaces.GetOptions.md) |
 
 #### Returns
@@ -39,9 +39,9 @@
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:22](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/rest_data_source.ts#L22)
+[interfaces/rest_data_source.ts:22](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/network/src/interfaces/rest_data_source.ts#L22)
 
-___
+---
 
 ### get
 
@@ -50,14 +50,14 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
+| Name       | Type                                            |
+| :--------- | :---------------------------------------------- |
+| `url`      | `string`                                        |
 | `options?` | [`GetOptions`](NetworkInterfaces.GetOptions.md) |
 
 #### Returns
@@ -66,9 +66,9 @@ ___
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/rest_data_source.ts#L14)
+[interfaces/rest_data_source.ts:14](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/network/src/interfaces/rest_data_source.ts#L14)
 
-___
+---
 
 ### patch
 
@@ -77,14 +77,14 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
+| Name       | Type                                              |
+| :--------- | :------------------------------------------------ |
+| `url`      | `string`                                          |
 | `options?` | [`PostOptions`](NetworkInterfaces.PostOptions.md) |
 
 #### Returns
@@ -93,9 +93,9 @@ ___
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:20](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/rest_data_source.ts#L20)
+[interfaces/rest_data_source.ts:20](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/network/src/interfaces/rest_data_source.ts#L20)
 
-___
+---
 
 ### post
 
@@ -104,14 +104,14 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
+| Name       | Type                                              |
+| :--------- | :------------------------------------------------ |
+| `url`      | `string`                                          |
 | `options?` | [`PostOptions`](NetworkInterfaces.PostOptions.md) |
 
 #### Returns
@@ -120,9 +120,9 @@ ___
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:16](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/rest_data_source.ts#L16)
+[interfaces/rest_data_source.ts:16](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/network/src/interfaces/rest_data_source.ts#L16)
 
-___
+---
 
 ### put
 
@@ -131,14 +131,14 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
+| Name       | Type                                              |
+| :--------- | :------------------------------------------------ |
+| `url`      | `string`                                          |
 | `options?` | [`PostOptions`](NetworkInterfaces.PostOptions.md) |
 
 #### Returns
@@ -147,4 +147,4 @@ ___
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:18](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/network/src/interfaces/rest_data_source.ts#L18)
+[interfaces/rest_data_source.ts:18](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/network/src/interfaces/rest_data_source.ts#L18)

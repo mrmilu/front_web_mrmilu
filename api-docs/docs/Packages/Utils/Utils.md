@@ -28,13 +28,13 @@ Function that lets you cancel then and catch chain of a promise.
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type            |
+| :-------- | :-------------- |
 | `promise` | `Promise`<`T`\> |
 
 #### Returns
@@ -43,9 +43,9 @@ Function that lets you cancel then and catch chain of a promise.
 
 #### Defined in
 
-[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/utils/src/promise.ts#L23)
+[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/promise.ts#L23)
 
-___
+---
 
 ### timeout
 
@@ -55,8 +55,8 @@ Promised based setTimeout
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type     |
+| :------------ | :------- |
 | `miliseconds` | `number` |
 
 #### Returns
@@ -65,4 +65,4 @@ Promised based setTimeout
 
 #### Defined in
 
-[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/5e11653/packages/utils/src/promise.ts#L5)
+[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/promise.ts#L5)
