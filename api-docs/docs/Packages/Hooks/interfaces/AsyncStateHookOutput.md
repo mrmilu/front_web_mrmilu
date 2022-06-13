@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[async_state.ts:6](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/async_state.ts#L6)
+[async_state.ts:6](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/hooks/src/async_state.ts#L6)
 
 ## Methods
 
@@ -30,8 +30,8 @@
 
 #### Parameters
 
-| Name      | Type                  |
-| :-------- | :-------------------- |
+| Name | Type |
+| :------ | :------ |
 | `promise` | `Promise`<`unknown`\> |
 
 #### Returns
@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[async_state.ts:7](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/hooks/src/async_state.ts#L7)
+[async_state.ts:7](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/hooks/src/async_state.ts#L7)

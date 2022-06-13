@@ -33,9 +33,9 @@ Generates an expiration date based in a amount of days
 
 #### Parameters
 
-| Name   | Type     | Default value |
-| :----- | :------- | :------------ |
-| `days` | `number` | `365`         |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `days` | `number` | `365` |
 
 #### Returns
 
@@ -43,9 +43,9 @@ Generates an expiration date based in a amount of days
 
 #### Defined in
 
-[cookie.ts:46](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/cookie.ts#L46)
+[cookie.ts:47](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/utils/src/cookie.ts#L47)
 
----
+___
 
 ### eraseCookie
 
@@ -55,8 +55,8 @@ Erases cookie from document
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `name` | `string` |
 
 #### Returns
@@ -65,21 +65,22 @@ Erases cookie from document
 
 #### Defined in
 
-[cookie.ts:38](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/cookie.ts#L38)
+[cookie.ts:39](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/utils/src/cookie.ts#L39)
 
----
+___
 
 ### getCookie
 
-▸ `Static` **getCookie**(`name`): `string`
+▸ `Static` **getCookie**(`name`, `cookies?`): `string`
 
-Gets cookie from document
+Gets cookie from document or provided cookie string
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
-| `name` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `name` | `string` | `undefined` |
+| `cookies` | `string` | `document.cookie` |
 
 #### Returns
 
@@ -87,9 +88,9 @@ Gets cookie from document
 
 #### Defined in
 
-[cookie.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/cookie.ts#L23)
+[cookie.ts:24](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/utils/src/cookie.ts#L24)
 
----
+___
 
 ### setCookie
 
@@ -99,11 +100,11 @@ Sets cookie in document
 
 #### Parameters
 
-| Name    | Type     | Default value |
-| :------ | :------- | :------------ |
-| `name`  | `string` | `undefined`   |
-| `value` | `string` | `""`          |
-| `days`  | `number` | `365`         |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `name` | `string` | `undefined` |
+| `value` | `string` | `""` |
+| `days` | `number` | `365` |
 
 #### Returns
 
@@ -111,4 +112,4 @@ Sets cookie in document
 
 #### Defined in
 
-[cookie.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/utils/src/cookie.ts#L11)
+[cookie.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/utils/src/cookie.ts#L11)

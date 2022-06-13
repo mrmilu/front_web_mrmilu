@@ -26,7 +26,7 @@ Google tag manager service for sending events to data layer
 
 #### Defined in
 
-[tag_manager_service.ts:19](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/services/src/tag_manager_service.ts#L19)
+[tag_manager_service.ts:19](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/services/src/tag_manager_service.ts#L19)
 
 ## Properties
 
@@ -36,7 +36,7 @@ Google tag manager service for sending events to data layer
 
 #### Defined in
 
-[tag_manager_service.ts:17](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/services/src/tag_manager_service.ts#L17)
+[tag_manager_service.ts:17](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/services/src/tag_manager_service.ts#L17)
 
 ## Methods
 
@@ -48,9 +48,9 @@ Tag manager push to data layer method
 
 #### Parameters
 
-| Name          | Type                          |
-| :------------ | :---------------------------- |
-| `name`        | `string`                      |
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
 | `parameters?` | `Record`<`string`, `string`\> |
 
 #### Returns
@@ -59,4 +59,4 @@ Tag manager push to data layer method
 
 #### Defined in
 
-[tag_manager_service.ts:31](https://github.com/mrmilu/front_web_mrmilu/blob/5d35c52/packages/services/src/tag_manager_service.ts#L31)
+[tag_manager_service.ts:31](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/services/src/tag_manager_service.ts#L31)
