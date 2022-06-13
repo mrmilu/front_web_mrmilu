@@ -17,12 +17,13 @@ export default class CookieUtils {
   }
 
   /**
-   * Gets cookie from document
+   * Gets cookie from document or provided cookie string
    * @param name
+   * @param cookies
    */
-  static getCookie(name: string) {
+  static getCookie(name: string, cookies = document.cookie) {
     const nameEQ = name + "=";
-    const ca = document.cookie.split(";");
+    const ca = cookies.split(";");
     for (let i = 0; i < ca.length; i++) {
       let c = ca[i];
       while (c.charAt(0) == " ") c = c.substring(1, c.length);
