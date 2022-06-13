@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.2.0...v1.3.0) (2022-06-13)
+
+
+### Features
+
+* **utils:** getCookie method possibility to pass cookies string and defaulted to document.cookie ([d604508](https://github.com/mrmilu/front_web_mrmilu/commit/d60450899aa453c481d801cc93fc61312086489f))
+
+
+### Bug Fixes
+
+* **root:** release action removed yarn cache ([df34e4d](https://github.com/mrmilu/front_web_mrmilu/commit/df34e4df1a2a864933970097b97f1afc9c7cb1c6))
+
 ## [1.2.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.1...v1.2.0) (2022-05-19)
 
 
