@@ -19,7 +19,7 @@ export default class CookieUtils {
   /**
    * Gets cookie from document or provided cookie string
    * @param name
-   * @param cookies
+   * @param {string} [cookies=document.cookie]
    */
   static getCookie(name: string, cookies = document.cookie) {
     const nameEQ = name + "=";
