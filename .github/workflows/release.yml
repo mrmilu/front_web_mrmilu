@@ -30,8 +30,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       #      - name: Get coverage
       #        run: yarn test:badges
@@ -44,6 +42,8 @@ jobs:
 
       - name: Release & publish
         run: yarn build-publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       #        run: |
       #          yarn release
       #          git push --follow-tags origin master
