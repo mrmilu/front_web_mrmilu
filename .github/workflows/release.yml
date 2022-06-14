@@ -31,29 +31,30 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Get coverage
-        run: yarn test:badges
-
-      - name: Commit changes
-        run: |
-          git add .
-          git commit -m "chore(root): updated test badge"
-          git push
+      #      - name: Get coverage
+      #        run: yarn test:badges
+      #
+      #      - name: Commit changes
+      #        run: |
+      #          git add .
+      #          git commit -m "chore(root): updated test badge"
+      #          git push
 
       - name: Release & publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          yarn release
-          git push --follow-tags origin master
-          yarn build-publish
+        run: yarn build-publish
+      #        run: |
+      #          yarn release
+      #          git push --follow-tags origin master
+      #          yarn build-publish
 
-      - name: Generate docs
-        run: |
-          yarn generate-docs
-          git add .
-          git commit -m "chore(root): updated api-docs"
-          git push
+      #      - name: Generate docs
+      #        run: |
+      #          yarn generate-docs
+      #          git add .
+      #          git commit -m "chore(root): updated api-docs"
+      #          git push
 
       - name: Set env for last tag release
         run: echo "LAST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
