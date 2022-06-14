@@ -40,10 +40,8 @@ jobs:
       #          git commit -m "chore(root): updated test badge"
       #          git push
 
-      - name: Release & publish
-        run: yarn build-publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Release
+        run: yarn build
       #        run: |
       #          yarn release
       #          git push --follow-tags origin master
@@ -55,6 +53,18 @@ jobs:
       #          git add .
       #          git commit -m "chore(root): updated api-docs"
       #          git push
+
+      - name: Publish Hooks
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: "./packages/hooks/package.json"
+
+      - name: Publish Services
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: "./packages/services/package.json"
 
       - name: Set env for last tag release
         run: echo "LAST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
