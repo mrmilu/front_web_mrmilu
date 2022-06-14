@@ -1,6 +1,6 @@
 {
   "name": "@front_web_mrmilu/hooks",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "main": "dist/front_web_mrmilu-hooks.cjs.js",
   "module": "dist/front_web_mrmilu-hooks.esm.js",
   "author": "Mr.Milú",
