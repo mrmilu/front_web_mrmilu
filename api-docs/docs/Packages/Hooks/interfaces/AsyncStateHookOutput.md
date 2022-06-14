@@ -30,8 +30,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                  |
+| :-------- | :-------------------- |
 | `promise` | `Promise`<`unknown`\> |
 
 #### Returns
