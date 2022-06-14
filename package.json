@@ -11,7 +11,6 @@
     "patch": "patch-package",
     "postinstall": "yarn patch-package",
     "release": "standard-version",
-    "build-publish": "preconstruct build && yarn workspaces run npm-publish",
     "generate-docs": "yarn workspaces run typedoc && node scripts/update_docusaurus_intro.js",
     "test": "jest",
     "test:badges": "jest --collect-coverage && make-coverage-badge",

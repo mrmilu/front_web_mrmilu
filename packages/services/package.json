@@ -7,14 +7,9 @@
   "license": "MIT",
   "sideEffects": false,
   "scripts": {
-    "yalc-push": "yalc push --private",
-    "npm-publish": "npm publish --access public"
+    "yalc-push": "yalc push --private"
   },
   "peerDependencies": {
     "@babel/runtime": "7.x"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
   }
 }

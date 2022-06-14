@@ -31,28 +31,27 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      #      - name: Get coverage
-      #        run: yarn test:badges
-      #
-      #      - name: Commit changes
-      #        run: |
-      #          git add .
-      #          git commit -m "chore(root): updated test badge"
-      #          git push
+      - name: Get coverage
+        run: yarn test:badges
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "chore(root): updated test badge"
+          git push
 
       - name: Release
-        run: yarn build
-      #        run: |
-      #          yarn release
-      #          git push --follow-tags origin master
-      #          yarn build-publish
+        run: |
+          yarn release
+          git push --follow-tags origin master
+          yarn build
 
-      #      - name: Generate docs
-      #        run: |
-      #          yarn generate-docs
-      #          git add .
-      #          git commit -m "chore(root): updated api-docs"
-      #          git push
+      - name: Generate docs
+        run: |
+          yarn generate-docs
+          git add .
+          git commit -m "chore(root): updated api-docs"
+          git push
 
       - name: Publish Hooks
         uses: JS-DevTools/npm-publish@v1
@@ -65,6 +64,18 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: "./packages/services/package.json"
+
+      - name: Publish Utils
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: "./packages/utils/package.json"
+
+      - name: Publish Network
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: "./packages/network/package.json"
 
       - name: Set env for last tag release
         run: echo "LAST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
