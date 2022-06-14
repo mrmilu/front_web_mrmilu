@@ -41,10 +41,12 @@ jobs:
           git push
 
       - name: Release & publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           yarn release
           git push --follow-tags origin master
-          yarn npm-publish
+          yarn build-publish
 
       - name: Generate docs
         run: |

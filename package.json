@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "Mr.Milú",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "scripts": {
     "watch": "preconstruct watch --onSuccess='yarn workspace %pkg% yalc-push'",
     "dev": "preconstruct dev",
@@ -11,7 +11,7 @@
     "patch": "patch-package",
     "postinstall": "yarn patch-package",
     "release": "standard-version",
-    "npm-publish": "preconstruct build && yarn workspaces run npm publish --access public",
+    "build-publish": "preconstruct build && yarn workspaces run npm-publish",
     "generate-docs": "yarn workspaces run typedoc && node scripts/update_docusaurus_intro.js",
     "test": "jest",
     "test:badges": "jest --collect-coverage && make-coverage-badge",
