@@ -1,4 +1,4 @@
-import { createElement, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import type { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 
 export interface SafeImageProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
@@ -9,7 +9,7 @@ export interface SafeImageProps extends DetailedHTMLProps<ImgHTMLAttributes<HTML
 /**
  * Image that shows `placeholderImage` if `src` is empty or invalid
  */
-export default function SafeImage({ src, placeholderSrc, ...props }: SafeImageProps) {
+export default function SafeImage({ src, placeholderSrc, alt, ...props }: SafeImageProps) {
   const [invalid, setInvalid] = useState(false); // Controls whether current src is invalid
 
   const prevSrc = useRef(src);
@@ -20,10 +20,11 @@ export default function SafeImage({ src, placeholderSrc, ...props }: SafeImagePr
     }
   }, [src]);
 
-  return createElement("img", {
-    src: invalid ? placeholderSrc : (src || placeholderSrc), // If `src` is empty or invalid, show `placeholderSrc`
-    onError: () => setInvalid(true),
-    ...props
-  });
+  return <img
+    src={invalid ? placeholderSrc : (src || placeholderSrc)} // If `src` is empty or invalid, show `placeholderSrc`
+    onError={() => setInvalid(true)}
+    alt={alt}
+    {...props}
+  />;
 };
 
