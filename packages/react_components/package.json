@@ -1,8 +1,8 @@
 {
-  "name": "@front_web_mrmilu/components",
+  "name": "@front_web_mrmilu/react_components",
   "version": "1.0.0",
-  "main": "dist/front_web_mrmilu-components.cjs.js",
-  "module": "dist/front_web_mrmilu-components.esm.js",
+  "main": "dist/front_web_mrmilu-react_components.cjs.js",
+  "module": "dist/front_web_mrmilu-react_components.esm.js",
   "author": "Mr.Milú",
   "license": "MIT",
   "sideEffects": false,

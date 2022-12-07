@@ -1,8 +1,8 @@
 {
   "entryPoints": ["src/index.ts"],
-  "out": "../../api-docs/docs/Packages/Hooks",
+  "out": "../../api-docs/docs/Packages/ReactComponents",
   "readme": "none",
   "plugin": "typedoc-plugin-markdown",
-  "entryDocument": "Hooks.md",
+  "entryDocument": "ReactComponents.md",
   "excludeExternals": true
 }
