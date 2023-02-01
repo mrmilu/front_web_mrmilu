@@ -19,7 +19,7 @@ describe("use effect once hook", () => {
           return () => {
             cleanupMockFn();
           };
-        }),
+        }, [mockFn, cleanupMockFn]),
       { wrapper: StrictModeWrapper }
     );
     unmount();
@@ -38,7 +38,7 @@ describe("use effect once hook", () => {
         return () => {
           cleanupMockFn();
         };
-      })
+      }, [mockFn, cleanupMockFn])
     );
     unmount();
     expect(mockFn).toHaveBeenCalledOnce();
