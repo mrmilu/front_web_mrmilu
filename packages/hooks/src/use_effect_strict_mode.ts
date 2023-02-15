@@ -7,11 +7,12 @@ import { useEffect, useRef } from "react";
  * @param deps
  */
 const useEffectStrictMode = (effect: EffectCallback, deps: DependencyList) => {
-  const runOnce = useRef(false)
+  const runOnce = useRef(false);
 
   useEffect(() => {
-    if(runOnce.current || process.env.NODE_ENV === "production") return effect()
+    if (runOnce.current || process.env.NODE_ENV === "production") return effect();
     runOnce.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 };
 
