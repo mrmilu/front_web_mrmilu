@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:2](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/interfaces/rest_data_source.ts#L2)
+[interfaces/rest_data_source.ts:2](https://github.com/mrmilu/front_web_mrmilu/blob/8fc805a/packages/network/src/interfaces/rest_data_source.ts#L2)
