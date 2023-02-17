@@ -59,6 +59,9 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
+  "resolutions": {
+    "@types/react": "18.0.9"
+  },
   "preconstruct": {
     "packages": [
       "packages/*"
