@@ -10,5 +10,5 @@ module.exports = {
     filename: `${dirUtils.PACKAGES_ROOT_DIR}/${packageDir}/package.json`,
     type: "json"
   })),
-  releaseCommitMessageFormat: "chore(release): [skip-ci] {{currentTag}}"
+  releaseCommitMessageFormat: "chore(release): [skip ci] {{currentTag}}"
 };
