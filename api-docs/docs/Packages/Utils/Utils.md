@@ -43,7 +43,7 @@ Function that lets you cancel then and catch chain of a promise.
 
 #### Defined in
 
-[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/utils/src/promise.ts#L23)
+[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/utils/src/promise.ts#L23)
 
 ___
 
@@ -65,4 +65,4 @@ Promised based setTimeout
 
 #### Defined in
 
-[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/utils/src/promise.ts#L5)
+[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/utils/src/promise.ts#L5)

@@ -34,7 +34,7 @@ Graphql client abstraction of Apollo client.
 
 #### Defined in
 
-[graphql_client.ts:17](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L17)
+[graphql_client.ts:17](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L17)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Graphql client abstraction of Apollo client.
 
 #### Defined in
 
-[graphql_client.ts:15](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L15)
+[graphql_client.ts:15](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L15)
 
 ## Methods
 
@@ -75,7 +75,7 @@ Graphql client mutate method
 
 #### Defined in
 
-[graphql_client.ts:45](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L45)
+[graphql_client.ts:45](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L45)
 
 ___
 
@@ -106,4 +106,4 @@ Graphql client query method
 
 #### Defined in
 
-[graphql_client.ts:73](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L73)
+[graphql_client.ts:73](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L73)
