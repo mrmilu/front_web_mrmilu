@@ -27,14 +27,14 @@ Graphql client abstraction of Apollo client.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `uri` | `string` |
+| Name             | Type               |
+| :--------------- | :----------------- |
+| `uri`            | `string`           |
 | `possibleTypes?` | `PossibleTypesMap` |
 
 #### Defined in
 
-[graphql_client.ts:17](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L17)
+[graphql_client.ts:17](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L17)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Graphql client abstraction of Apollo client.
 
 #### Defined in
 
-[graphql_client.ts:15](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L15)
+[graphql_client.ts:15](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L15)
 
 ## Methods
 
@@ -56,18 +56,18 @@ Graphql client mutate method
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `T` |
-| `V` | `Record`<`string`, `unknown`\> |
+| Name | Type                           |
+| :--- | :----------------------------- |
+| `T`  | `T`                            |
+| `V`  | `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `mutation` | `DocumentNode` |
-| `variables?` | `V` |
-| `options?` | [`MutationOptions`](../Network.md#mutationoptions) |
+| Name         | Type                                               |
+| :----------- | :------------------------------------------------- |
+| `mutation`   | `DocumentNode`                                     |
+| `variables?` | `V`                                                |
+| `options?`   | [`MutationOptions`](../Network.md#mutationoptions) |
 
 #### Returns
 
@@ -75,9 +75,9 @@ Graphql client mutate method
 
 #### Defined in
 
-[graphql_client.ts:45](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L45)
+[graphql_client.ts:45](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L45)
 
-___
+---
 
 ### query
 
@@ -87,18 +87,18 @@ Graphql client query method
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `T` |
-| `V` | `Record`<`string`, `unknown`\> |
+| Name | Type                           |
+| :--- | :----------------------------- |
+| `T`  | `T`                            |
+| `V`  | `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `DocumentNode` |
-| `variables?` | `V` |
-| `options?` | [`QueryOptions`](../Network.md#queryoptions) |
+| Name         | Type                                         |
+| :----------- | :------------------------------------------- |
+| `query`      | `DocumentNode`                               |
+| `variables?` | `V`                                          |
+| `options?`   | [`QueryOptions`](../Network.md#queryoptions) |
 
 #### Returns
 
@@ -106,4 +106,4 @@ Graphql client query method
 
 #### Defined in
 
-[graphql_client.ts:73](https://github.com/mrmilu/front_web_mrmilu/blob/da9951b/packages/network/src/graphql_client.ts#L73)
+[graphql_client.ts:73](https://github.com/mrmilu/front_web_mrmilu/blob/a26d51a/packages/network/src/graphql_client.ts#L73)
