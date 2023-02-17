@@ -1,51 +1,63 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.5.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.4.0...v1.5.0) (2023-02-17)
+
+### Features
+
+- add components package with safe image component ([6590fe0](https://github.com/mrmilu/front_web_mrmilu/commit/6590fe0630733c7121362d401f8e5dce378e8cbe))
+- **components:** change package name to react components ([db6bb13](https://github.com/mrmilu/front_web_mrmilu/commit/db6bb13555ced4726c3cf6fa7e81ffe66c8a4188))
+- **react components:** change package name ([779b522](https://github.com/mrmilu/front_web_mrmilu/commit/779b5228e9043e13fe4cd906dd398960cfc22eba))
+- **safe image component:** add tests ([35a2d71](https://github.com/mrmilu/front_web_mrmilu/commit/35a2d7179b43daa4380a04aefccd11754269b53f))
+
+### Bug Fixes
+
+- change file name in package json ([0ac71ad](https://github.com/mrmilu/front_web_mrmilu/commit/0ac71ad1e16b3954a26e185905c4cea6a41bc4ab))
+- **react-components:** change package version ([7a36b80](https://github.com/mrmilu/front_web_mrmilu/commit/7a36b806c0f8dd7b0ed50d50f0d93c29564c99d8))
+- **react-components:** use jsx ([8ae2da0](https://github.com/mrmilu/front_web_mrmilu/commit/8ae2da040771bd643818ed1df00c74fc4f352dea))
+- **root:** add babel react preset ([c0fff1b](https://github.com/mrmilu/front_web_mrmilu/commit/c0fff1bb954d31e2be4ac4372cde67dff9e4fdd0))
+- **root:** remove caret from dependency ([d99c79e](https://github.com/mrmilu/front_web_mrmilu/commit/d99c79ed10b395f15fc26051707f3d9c22a1b041))
+- **typedoc:** do not change hooks typedoc ([8fbed75](https://github.com/mrmilu/front_web_mrmilu/commit/8fbed75f20c3374cee49e0a1168c8e505ebb764b))
 
 ## [1.4.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.3.0...v1.4.0) (2022-06-14)
 
-
 ### Features
 
-* **root:** dropped gitpkg publish and publishing in npm ([85f5cfa](https://github.com/mrmilu/front_web_mrmilu/commit/85f5cfa09c28702d5575bec27863bebeb5ac4e1e))
+- **root:** dropped gitpkg publish and publishing in npm ([85f5cfa](https://github.com/mrmilu/front_web_mrmilu/commit/85f5cfa09c28702d5575bec27863bebeb5ac4e1e))
 
 ## [1.3.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.2.0...v1.3.0) (2022-06-13)
 
-
 ### Features
 
-* **utils:** getCookie method possibility to pass cookies string and defaulted to document.cookie ([d604508](https://github.com/mrmilu/front_web_mrmilu/commit/d60450899aa453c481d801cc93fc61312086489f))
-
+- **utils:** getCookie method possibility to pass cookies string and defaulted to document.cookie ([d604508](https://github.com/mrmilu/front_web_mrmilu/commit/d60450899aa453c481d801cc93fc61312086489f))
 
 ### Bug Fixes
 
-* **root:** release action removed yarn cache ([df34e4d](https://github.com/mrmilu/front_web_mrmilu/commit/df34e4df1a2a864933970097b97f1afc9c7cb1c6))
+- **root:** release action removed yarn cache ([df34e4d](https://github.com/mrmilu/front_web_mrmilu/commit/df34e4df1a2a864933970097b97f1afc9c7cb1c6))
 
 ## [1.2.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.1...v1.2.0) (2022-05-19)
 
-
 ### Features
 
-* **hooks:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([b3e9fad](https://github.com/mrmilu/front_web_mrmilu/commit/b3e9fad3d01f17f59db2c6a4a2c5913f0269a906))
-* **network:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([bef0591](https://github.com/mrmilu/front_web_mrmilu/commit/bef0591a43284bb4474aed9dcaa0c33ec6a73af8))
-* **root:** added docosaurus to show auto generated typedoc markdown files ([0c58f9d](https://github.com/mrmilu/front_web_mrmilu/commit/0c58f9dd1cbb791340d8fd192b1c6cf19f084ffc))
-* **utils:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([23ccd6a](https://github.com/mrmilu/front_web_mrmilu/commit/23ccd6af8c4f9f3cb741caaad8beeae93536811e))
-
+- **hooks:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([b3e9fad](https://github.com/mrmilu/front_web_mrmilu/commit/b3e9fad3d01f17f59db2c6a4a2c5913f0269a906))
+- **network:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([bef0591](https://github.com/mrmilu/front_web_mrmilu/commit/bef0591a43284bb4474aed9dcaa0c33ec6a73af8))
+- **root:** added docosaurus to show auto generated typedoc markdown files ([0c58f9d](https://github.com/mrmilu/front_web_mrmilu/commit/0c58f9dd1cbb791340d8fd192b1c6cf19f084ffc))
+- **utils:** added typedoc.json config, exporting some interfaces and added JSDoc comments ([23ccd6a](https://github.com/mrmilu/front_web_mrmilu/commit/23ccd6af8c4f9f3cb741caaad8beeae93536811e))
 
 ### Bug Fixes
 
-* **root:** added to github action test_coverage fetch-depth 0 ([519bfc5](https://github.com/mrmilu/front_web_mrmilu/commit/519bfc5b3047c57a930388e8e37621c5735b82ec))
+- **root:** added to github action test_coverage fetch-depth 0 ([519bfc5](https://github.com/mrmilu/front_web_mrmilu/commit/519bfc5b3047c57a930388e8e37621c5735b82ec))
 
 ### [1.1.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.1.0...v1.1.1) (2022-05-18)
 
-
 ### Bug Fixes
 
-* **hooks:** added @babel/runtime as peerDepedency ([7006e38](https://github.com/mrmilu/front_web_mrmilu/commit/7006e38c0e26c576375aad04fb78a90345a59d5a))
-* **network:** added @babel/runtime as peerDepedency ([5af316d](https://github.com/mrmilu/front_web_mrmilu/commit/5af316daa53b4162c00a723400d9e105a4688187))
-* **root:** removed babel-runtime from root, completed readme and added babel-runtime to babel config ([1371e54](https://github.com/mrmilu/front_web_mrmilu/commit/1371e54e4662ef687e63fb59b762246defedb867))
-* **services:** added @babel/runtime as peerDepedency ([c74b545](https://github.com/mrmilu/front_web_mrmilu/commit/c74b545526cc75d8fd6a188536ccefa23d53c8bd))
-* **utils:** added @babel/runtime as peerDepedency ([1c9acfa](https://github.com/mrmilu/front_web_mrmilu/commit/1c9acfa29d8d3af3e9d606b50cb4ccee1b6ad566))
+- **hooks:** added @babel/runtime as peerDepedency ([7006e38](https://github.com/mrmilu/front_web_mrmilu/commit/7006e38c0e26c576375aad04fb78a90345a59d5a))
+- **network:** added @babel/runtime as peerDepedency ([5af316d](https://github.com/mrmilu/front_web_mrmilu/commit/5af316daa53b4162c00a723400d9e105a4688187))
+- **root:** removed babel-runtime from root, completed readme and added babel-runtime to babel config ([1371e54](https://github.com/mrmilu/front_web_mrmilu/commit/1371e54e4662ef687e63fb59b762246defedb867))
+- **services:** added @babel/runtime as peerDepedency ([c74b545](https://github.com/mrmilu/front_web_mrmilu/commit/c74b545526cc75d8fd6a188536ccefa23d53c8bd))
+- **utils:** added @babel/runtime as peerDepedency ([1c9acfa](https://github.com/mrmilu/front_web_mrmilu/commit/1c9acfa29d8d3af3e9d606b50cb4ccee1b6ad566))
 
 ## [1.1.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.0.1...v1.1.0) (2022-05-12)
 
