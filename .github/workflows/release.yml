@@ -37,7 +37,7 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "chore(root): updated test badge"
+          git commit -m "chore(root): [skip ci] updated test badge"
           git push
 
       - name: Release
@@ -49,8 +49,9 @@ jobs:
       - name: Generate docs
         run: |
           yarn generate-docs
+          git pull
           git add .
-          git commit -m "chore(root): updated api-docs"
+          git commit -m "chore(root): [skip ci] updated api-docs"
           git push
 
       - name: Publish Hooks
