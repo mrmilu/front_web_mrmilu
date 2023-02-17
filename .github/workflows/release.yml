@@ -78,6 +78,12 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           package: "./packages/network/package.json"
 
+      - name: Publish React Components
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: "./packages/react_components/package.json"
+
       - name: Set env for last tag release
         run: echo "LAST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 

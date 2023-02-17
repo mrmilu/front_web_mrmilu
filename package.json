@@ -10,7 +10,7 @@
     "build": "preconstruct build",
     "patch": "patch-package",
     "postinstall": "yarn patch-package",
-    "release": "standard-version",
+    "release": "commit-and-tag-version",
     "generate-docs": "yarn workspaces run typedoc && node scripts/update_docusaurus_intro.js",
     "test": "jest",
     "test:badges": "jest --collect-coverage && make-coverage-badge",
@@ -51,7 +51,7 @@
     "make-coverage-badge": "1.2.0",
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.2",
-    "standard-version": "9.5.0",
+    "commit-and-tag-version": "11.1.0",
     "ts-node": "10.7.0",
     "typedoc": "0.22.15",
     "typedoc-plugin-markdown": "3.12.1"
