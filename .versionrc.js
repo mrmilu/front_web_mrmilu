@@ -9,5 +9,6 @@ module.exports = {
   packageFiles: packageDirectories.map((packageDir) => ({
     filename: `${dirUtils.PACKAGES_ROOT_DIR}/${packageDir}/package.json`,
     type: "json"
-  }))
+  })),
+  releaseCommitMessageFormat: "chore(release): [skip-ci] {{currentTag}}"
 };
