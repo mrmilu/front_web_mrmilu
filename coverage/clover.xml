@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676640393628" clover="3.2.0">
-  <project timestamp="1676640393628" name="All files">
-    <metrics statements="132" coveredstatements="129" conditionals="77" coveredconditionals="74" methods="43" coveredmethods="42" elements="252" coveredelements="245" complexity="0" loc="132" ncloc="132" packages="6" files="18" classes="18"/>
+<coverage generated="1676872650778" clover="3.2.0">
+  <project timestamp="1676872650778" name="All files">
+    <metrics statements="137" coveredstatements="134" conditionals="81" coveredconditionals="78" methods="45" coveredmethods="44" elements="263" coveredelements="256" complexity="0" loc="137" ncloc="137" packages="6" files="19" classes="19"/>
     <package name="hooks.src">
-      <metrics statements="61" coveredstatements="61" conditionals="31" coveredconditionals="30" methods="21" coveredmethods="21"/>
+      <metrics statements="66" coveredstatements="66" conditionals="35" coveredconditionals="34" methods="23" coveredmethods="23"/>
       <file name="async_state.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/async_state.ts">
         <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
-        <line num="14" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="15" count="6" type="stmt"/>
         <line num="16" count="6" type="stmt"/>
         <line num="18" count="6" type="stmt"/>
@@ -22,8 +22,8 @@
       </file>
       <file name="breakpoint_match.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/breakpoint_match.ts">
         <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="32" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="32" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="33" count="11" type="stmt"/>
         <line num="35" count="11" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
@@ -47,7 +47,7 @@
       </file>
       <file name="click_outisde.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/click_outisde.ts">
         <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="9" count="3" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="cond" truecount="4" falsecount="0"/>
@@ -62,9 +62,17 @@
       <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
+      <file name="use_effect_run_once.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/use_effect_run_once.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
       <file name="use_effect_strict_mode.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/use_effect_strict_mode.ts">
         <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="11" methods="3" coveredmethods="3"/>
-        <line num="8" count="3" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
         <line num="9" count="3" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="11" count="3" type="stmt"/>
