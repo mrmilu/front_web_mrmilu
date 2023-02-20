@@ -32,4 +32,4 @@ Image that shows `placeholderImage` if `src` is empty or invalid
 
 #### Defined in
 
-[safe_image.tsx:12](https://github.com/mrmilu/front_web_mrmilu/blob/8fc805a/packages/react_components/src/safe_image.tsx#L12)
+[safe_image.tsx:12](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/react_components/src/safe_image.tsx#L12)

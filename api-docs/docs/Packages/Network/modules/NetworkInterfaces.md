@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/8fc805a/packages/network/src/interfaces/rest_data_source.ts#L11)
+[interfaces/rest_data_source.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/network/src/interfaces/rest_data_source.ts#L11)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:10](https://github.com/mrmilu/front_web_mrmilu/blob/8fc805a/packages/network/src/interfaces/rest_data_source.ts#L10)
+[interfaces/rest_data_source.ts:10](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/network/src/interfaces/rest_data_source.ts#L10)
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 #### Defined in
 
-[interfaces/rest_data_source.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/8fc805a/packages/network/src/interfaces/rest_data_source.ts#L9)
+[interfaces/rest_data_source.ts:9](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/network/src/interfaces/rest_data_source.ts#L9)
