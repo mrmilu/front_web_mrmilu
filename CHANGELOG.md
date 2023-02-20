@@ -2,37 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [1.6.1](https://github.com/mrmilu/front_web_mrmilu/compare/v1.6.0...v1.6.1) (2023-02-20)
-
 ## [1.6.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.5.0...v1.6.0) (2023-02-20)
-
 
 ### Features
 
-* edit eslintrc to apply rules of hooks to custom hook ([dcf8e8a](https://github.com/mrmilu/front_web_mrmilu/commit/dcf8e8aa16e5138be457f13e0528f83f1932b150))
-* **hooks:** add comment to disable eslint warning ([2dfed59](https://github.com/mrmilu/front_web_mrmilu/commit/2dfed59ba96604f4f14b7fe15418c30b002576c5))
-* **hooks:** change use effect strict mode hook ([dec4ea7](https://github.com/mrmilu/front_web_mrmilu/commit/dec4ea7ca563acfa5203f886ab3d4f12193c5981))
-* **hooks:** create useEffectRunOnce hook instead of modifying useEffectStrictMode hook ([6297ba2](https://github.com/mrmilu/front_web_mrmilu/commit/6297ba20e64b98433f58c4bd9a1ae88ece653263))
+- edit eslintrc to apply rules of hooks to custom hook ([dcf8e8a](https://github.com/mrmilu/front_web_mrmilu/commit/dcf8e8aa16e5138be457f13e0528f83f1932b150))
+- **hooks:** add comment to disable eslint warning ([2dfed59](https://github.com/mrmilu/front_web_mrmilu/commit/2dfed59ba96604f4f14b7fe15418c30b002576c5))
+- **hooks:** change use effect strict mode hook ([dec4ea7](https://github.com/mrmilu/front_web_mrmilu/commit/dec4ea7ca563acfa5203f886ab3d4f12193c5981))
+- **hooks:** create useEffectRunOnce hook instead of modifying useEffectStrictMode hook ([6297ba2](https://github.com/mrmilu/front_web_mrmilu/commit/6297ba20e64b98433f58c4bd9a1ae88ece653263))
 
 ## [1.5.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.4.0...v1.5.0) (2023-02-17)
 
-
 ### Features
 
-* add components package with safe image component ([6590fe0](https://github.com/mrmilu/front_web_mrmilu/commit/6590fe0630733c7121362d401f8e5dce378e8cbe))
-* **components:** change package name to react components ([db6bb13](https://github.com/mrmilu/front_web_mrmilu/commit/db6bb13555ced4726c3cf6fa7e81ffe66c8a4188))
-* **react components:** change package name ([779b522](https://github.com/mrmilu/front_web_mrmilu/commit/779b5228e9043e13fe4cd906dd398960cfc22eba))
-* **safe image component:** add tests ([35a2d71](https://github.com/mrmilu/front_web_mrmilu/commit/35a2d7179b43daa4380a04aefccd11754269b53f))
-
+- add components package with safe image component ([6590fe0](https://github.com/mrmilu/front_web_mrmilu/commit/6590fe0630733c7121362d401f8e5dce378e8cbe))
+- **components:** change package name to react components ([db6bb13](https://github.com/mrmilu/front_web_mrmilu/commit/db6bb13555ced4726c3cf6fa7e81ffe66c8a4188))
+- **react components:** change package name ([779b522](https://github.com/mrmilu/front_web_mrmilu/commit/779b5228e9043e13fe4cd906dd398960cfc22eba))
+- **safe image component:** add tests ([35a2d71](https://github.com/mrmilu/front_web_mrmilu/commit/35a2d7179b43daa4380a04aefccd11754269b53f))
 
 ### Bug Fixes
 
-* change file name in package json ([0ac71ad](https://github.com/mrmilu/front_web_mrmilu/commit/0ac71ad1e16b3954a26e185905c4cea6a41bc4ab))
-* **react-components:** change package version ([7a36b80](https://github.com/mrmilu/front_web_mrmilu/commit/7a36b806c0f8dd7b0ed50d50f0d93c29564c99d8))
-* **react-components:** use jsx ([8ae2da0](https://github.com/mrmilu/front_web_mrmilu/commit/8ae2da040771bd643818ed1df00c74fc4f352dea))
-* **root:** add babel react preset ([c0fff1b](https://github.com/mrmilu/front_web_mrmilu/commit/c0fff1bb954d31e2be4ac4372cde67dff9e4fdd0))
-* **root:** remove caret from dependency ([d99c79e](https://github.com/mrmilu/front_web_mrmilu/commit/d99c79ed10b395f15fc26051707f3d9c22a1b041))
-* **typedoc:** do not change hooks typedoc ([8fbed75](https://github.com/mrmilu/front_web_mrmilu/commit/8fbed75f20c3374cee49e0a1168c8e505ebb764b))
+- change file name in package json ([0ac71ad](https://github.com/mrmilu/front_web_mrmilu/commit/0ac71ad1e16b3954a26e185905c4cea6a41bc4ab))
+- **react-components:** change package version ([7a36b80](https://github.com/mrmilu/front_web_mrmilu/commit/7a36b806c0f8dd7b0ed50d50f0d93c29564c99d8))
+- **react-components:** use jsx ([8ae2da0](https://github.com/mrmilu/front_web_mrmilu/commit/8ae2da040771bd643818ed1df00c74fc4f352dea))
+- **root:** add babel react preset ([c0fff1b](https://github.com/mrmilu/front_web_mrmilu/commit/c0fff1bb954d31e2be4ac4372cde67dff9e4fdd0))
+- **root:** remove caret from dependency ([d99c79e](https://github.com/mrmilu/front_web_mrmilu/commit/d99c79ed10b395f15fc26051707f3d9c22a1b041))
+- **typedoc:** do not change hooks typedoc ([8fbed75](https://github.com/mrmilu/front_web_mrmilu/commit/8fbed75f20c3374cee49e0a1168c8e505ebb764b))
 
 ## [1.4.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.3.0...v1.4.0) (2022-06-14)
 
