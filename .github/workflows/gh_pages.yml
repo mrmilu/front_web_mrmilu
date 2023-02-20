@@ -3,6 +3,8 @@ name: GitHub Pages Api-Docs
 on:
   workflow_dispatch:
   push:
+    branches:
+      - master
     paths:
       - ".github/workflows/gh_pages.yml"
       - "api-docs/**"
