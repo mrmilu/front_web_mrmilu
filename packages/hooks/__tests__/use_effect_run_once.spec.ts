@@ -1,4 +1,4 @@
-import { useEffectStrictMode } from "../src";
+import { useEffectRunOnce } from "../src";
 import { renderHook } from "@testing-library/react";
 import { StrictModeWrapper } from "./utils/strict_mode";
 
@@ -13,13 +13,13 @@ describe("use effect once hook", () => {
     const cleanupMockFn = jest.fn();
     const { unmount } = renderHook(
       () =>
-        useEffectStrictMode(() => {
+        useEffectRunOnce(() => {
           mockFn();
 
           return () => {
             cleanupMockFn();
           };
-        }),
+        }, [mockFn, cleanupMockFn]),
       { wrapper: StrictModeWrapper }
     );
     unmount();
@@ -32,13 +32,13 @@ describe("use effect once hook", () => {
     const mockFn = jest.fn();
     const cleanupMockFn = jest.fn();
     const { unmount } = renderHook(() =>
-      useEffectStrictMode(() => {
+      useEffectRunOnce(() => {
         mockFn();
 
         return () => {
           cleanupMockFn();
         };
-      })
+      }, [mockFn, cleanupMockFn])
     );
     unmount();
     expect(mockFn).toHaveBeenCalledOnce();
