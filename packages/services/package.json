@@ -1,6 +1,6 @@
 {
   "name": "@front_web_mrmilu/services",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "dist/front_web_mrmilu-services.cjs.js",
   "module": "dist/front_web_mrmilu-services.esm.js",
   "author": "Mr.Milú",

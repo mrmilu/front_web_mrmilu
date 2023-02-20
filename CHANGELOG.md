@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.6.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.5.0...v1.6.0) (2023-02-20)
+
+
+### Features
+
+* edit eslintrc to apply rules of hooks to custom hook ([dcf8e8a](https://github.com/mrmilu/front_web_mrmilu/commit/dcf8e8aa16e5138be457f13e0528f83f1932b150))
+* **hooks:** add comment to disable eslint warning ([2dfed59](https://github.com/mrmilu/front_web_mrmilu/commit/2dfed59ba96604f4f14b7fe15418c30b002576c5))
+* **hooks:** change use effect strict mode hook ([dec4ea7](https://github.com/mrmilu/front_web_mrmilu/commit/dec4ea7ca563acfa5203f886ab3d4f12193c5981))
+* **hooks:** create useEffectRunOnce hook instead of modifying useEffectStrictMode hook ([6297ba2](https://github.com/mrmilu/front_web_mrmilu/commit/6297ba20e64b98433f58c4bd9a1ae88ece653263))
+
 ## [1.5.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.4.0...v1.5.0) (2023-02-17)
 
 
