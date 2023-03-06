@@ -1,13 +1,10 @@
 name: GitHub Pages Api-Docs
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-    paths:
-      - ".github/workflows/gh_pages.yml"
-      - "api-docs/**"
+  workflow_run:
+    workflows: ["Release"]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -46,7 +43,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_ACCESS_TOKEN }}
           publish_dir: ./api-docs/build
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          user_name: mrm-dev
+          user_email: dev@mrmilu.com
