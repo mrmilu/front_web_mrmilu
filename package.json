@@ -36,6 +36,7 @@
     "@types/jest": "27.5.0",
     "@typescript-eslint/eslint-plugin": "5.23.0",
     "chalk": "4.1.2",
+    "commit-and-tag-version": "11.1.0",
     "css-mediaquery": "0.1.2",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
@@ -51,7 +52,6 @@
     "make-coverage-badge": "1.2.0",
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.2",
-    "commit-and-tag-version": "11.1.0",
     "ts-node": "10.7.0",
     "typedoc": "0.22.15",
     "typedoc-plugin-markdown": "3.12.1"

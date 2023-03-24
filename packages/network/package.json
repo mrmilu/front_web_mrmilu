@@ -10,12 +10,12 @@
     "yalc-push": "yalc push --private"
   },
   "devDependencies": {
-    "@apollo/client": "3.6.0",
-    "graphql": "16.4.0"
+    "@apollo/client": "3.7.10",
+    "graphql": "16.6.0"
   },
   "peerDependencies": {
-    "@babel/runtime": "7.x",
     "@apollo/client": "3.x",
+    "@babel/runtime": "7.x",
     "graphql": "16.x"
   }
 }

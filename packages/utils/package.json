@@ -10,10 +10,10 @@
     "yalc-push": "yalc push --private"
   },
   "devDependencies": {
-    "yup": "0.32.11"
+    "yup": "1.0.2"
   },
   "peerDependencies": {
-    "yup": "0.x",
-    "@babel/runtime": "7.x"
+    "@babel/runtime": "7.x",
+    "yup": "0.x"
   }
 }
