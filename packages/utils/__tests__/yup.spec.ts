@@ -1,4 +1,4 @@
-import yup from "../src/yup_extended";
+import yup from "../src/yup_extensions";
 
 describe("yup extension methods", () => {
   describe("string schema", () => {
