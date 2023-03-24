@@ -14,6 +14,6 @@
   },
   "peerDependencies": {
     "@babel/runtime": "7.x",
-    "yup": "0.x"
+    "yup": "1.x"
   }
 }
