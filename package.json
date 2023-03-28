@@ -21,8 +21,10 @@
   ],
   "dependencies": {
     "@babel/core": "7.21.3",
+    "global": "^4.4.0",
     "patch-package": "6.5.1",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "yalc": "^1.0.0-pre.53"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "7.21.0",
@@ -32,7 +34,7 @@
     "@commitlint/cli": "17.5.0",
     "@commitlint/config-conventional": "17.4.4",
     "@commitlint/prompt-cli": "17.5.0",
-    "@preconstruct/cli": "2.1.5",
+    "@preconstruct/cli": "2.4.0",
     "@types/jest": "29.5.0",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "chalk": "5.2.0",
