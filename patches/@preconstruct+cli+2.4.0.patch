@@ -1,0 +1,115 @@
+diff --git a/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js b/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js
+index 02e08de..09999e6 100644
+--- a/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js
++++ b/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js
+@@ -38,6 +38,7 @@ var estreeWalker = require('estree-walker');
+ var isReference = _interopDefault(require('is-reference'));
+ var MagicString = _interopDefault(require('magic-string'));
+ var ms = _interopDefault(require('ms'));
++const exec = util.promisify(require('child_process').exec);
+ 
+ let limit = pLimit(1); // there might be a simpler solution to this than using dataloader but it works so ¯\_(ツ)_/¯
+ 
+@@ -2584,7 +2585,7 @@ function relativePath(id) {
+   return path__default.relative(process.cwd(), id);
+ }
+ 
+-async function watchPackage(pkg, aliases) {
++async function watchPackage(pkg, aliases, onSuccessWatch) {
+   const _configs = getRollupConfigs(pkg, aliases);
+ 
+   let configs = _configs.map(config => {
+@@ -2602,7 +2603,7 @@ async function watchPackage(pkg, aliases) {
+   let startPromise = new Promise(resolve => {
+     startResolve = resolve;
+   });
+-  watcher.on("event", event => {
++  watcher.on("event", async event => {
+     // https://github.com/rollup/rollup/blob/aed954e4e6e8beabd47268916ff0955fbb20682d/bin/src/run/watch.ts#L71-L115
+     switch (event.code) {
+       case "ERROR":
+@@ -2631,6 +2632,23 @@ async function watchPackage(pkg, aliases) {
+       case "END":
+         {
+           info("waiting for changes...", pkg.name);
++
++          try {
++            let onSuccessCommand = onSuccessWatch
++            const hasPackageVar = onSuccessWatch.includes("%pkg%")
++            if (hasPackageVar) {
++            onSuccessCommand = onSuccessWatch.replace("%pkg%", pkg.name)
++              }
++
++            const { stdout, stderr } = await exec(onSuccessCommand);
++            if(stdout) info(stdout, pkg.name)
++            if(stderr) error(stderr, pkg.name)
++          } catch (e) {
++            error("error triggering onSuccess flag", pkg.name)
++            console.log(e)
++
++            process.exit(1)
++          }
+         }
+     }
+   });
+@@ -2640,12 +2658,12 @@ async function watchPackage(pkg, aliases) {
+   };
+ }
+ 
+-async function retryableWatch(pkg, aliases, getPromises, depth) {
++async function retryableWatch(pkg, aliases, getPromises, depth, onSuccessWatch) {
+   try {
+     let {
+       error,
+       start
+-    } = await watchPackage(pkg, aliases);
++    } = await watchPackage(pkg, aliases, onSuccessWatch);
+ 
+     if (depth === 0) {
+       getPromises({
+@@ -2657,7 +2675,7 @@ async function retryableWatch(pkg, aliases, getPromises, depth) {
+   } catch (err) {
+     if (err instanceof Promise) {
+       await err;
+-      await retryableWatch(pkg, aliases, getPromises, depth + 1);
++      await retryableWatch(pkg, aliases, getPromises, depth + 1, onSuccessWatch);
+       return;
+     }
+ 
+@@ -2665,7 +2683,7 @@ async function retryableWatch(pkg, aliases, getPromises, depth) {
+   }
+ }
+ 
+-async function build$1(directory) {
++async function build$1(directory, onSuccessWatch) {
+   createWorker();
+   let project = await Project.create(directory);
+   validateProject(project);
+@@ -2681,7 +2699,7 @@ async function build$1(directory) {
+     if (startCount === project.packages.length) {
+       success(successes.startedWatching);
+     }
+-  }, 0)));
++  }, 0, onSuccessWatch)));
+ }
+ 
+ async function fixEntrypoint(entrypoint) {
+@@ -2735,7 +2753,8 @@ async function fix(directory) {
+ 
+ process["e" + "nv"].NODE_ENV = "production";
+ let {
+-  input
++  input,
++  flags,
+ } = meow(`
+ Usage
+   $ preconstruct [command]
+@@ -2777,7 +2796,7 @@ class CommandNotFoundError extends Error {}
+ 
+       case "watch":
+         {
+-          await build$1(process.cwd());
++          await build$1(process.cwd(), flags.onSuccess);
+           return;
+         }
+ 

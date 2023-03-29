@@ -1,16 +1,21 @@
-import yup from "../src/yup_extended";
+import { object, string } from "yup";
+import { loadYupExtensions } from "../src";
 
+let yupSchema;
 describe("yup extension methods", () => {
   describe("string schema", () => {
-    const yupSchema = yup.object({
-      foo: yup.string().isNumber("It's not a number!")
+    beforeEach(() => {
+      loadYupExtensions();
+      yupSchema = object({
+        foo: string().isNumber("It's not a number!")
+      });
     });
 
     it("should check if value is a number and not fail", async () => {
       await expect(yupSchema.validate({ foo: "20" })).toResolve();
 
-      const yupSchemaEmptyMsg = yup.object({
-        foo: yup.string().isNumber()
+      const yupSchemaEmptyMsg = object({
+        foo: string().isNumber()
       });
       await expect(yupSchemaEmptyMsg.validate({ foo: "20" })).toResolve();
     });

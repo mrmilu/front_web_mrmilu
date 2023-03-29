@@ -1,6 +1,7 @@
-const util = require("util");
-const exec = util.promisify(require("child_process").exec);
-const chalk = require("chalk");
+import util from "util";
+import childProcess from "child_process";
+const exec = util.promisify(childProcess.exec);
+import chalk from "chalk";
 const error = chalk.bold.red;
 
 const run = async () => {

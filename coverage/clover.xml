@@ -1,217 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676872979142" clover="3.2.0">
-  <project timestamp="1676872979142" name="All files">
-    <metrics statements="137" coveredstatements="134" conditionals="81" coveredconditionals="78" methods="45" coveredmethods="44" elements="263" coveredelements="256" complexity="0" loc="137" ncloc="137" packages="6" files="19" classes="19"/>
+<coverage generated="1680098519998" clover="3.2.0">
+  <project timestamp="1680098519998" name="All files">
+    <metrics statements="152" coveredstatements="21" conditionals="84" coveredconditionals="3" methods="52" coveredmethods="9" elements="288" coveredelements="33" complexity="0" loc="152" ncloc="152" packages="6" files="20" classes="20"/>
     <package name="hooks.src">
-      <metrics statements="66" coveredstatements="66" conditionals="35" coveredconditionals="34" methods="23" coveredmethods="23"/>
-      <file name="async_state.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/async_state.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
-        <line num="14" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="19" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="34" count="6" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+      <metrics statements="66" coveredstatements="0" conditionals="35" coveredconditionals="0" methods="23" coveredmethods="0"/>
+      <file name="async_state.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/async_state.ts">
+        <metrics statements="13" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
       </file>
-      <file name="breakpoint_match.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/breakpoint_match.ts">
-        <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="32" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="33" count="11" type="stmt"/>
-        <line num="35" count="11" type="stmt"/>
-        <line num="36" count="11" type="stmt"/>
-        <line num="37" count="11" type="cond" truecount="2" falsecount="0"/>
-        <line num="40" count="11" type="stmt"/>
-        <line num="42" count="11" type="cond" truecount="3" falsecount="0"/>
-        <line num="48" count="11" type="stmt"/>
-        <line num="49" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="50" count="4" type="stmt"/>
-        <line num="51" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="53" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="60" count="11" type="stmt"/>
-        <line num="64" count="2" type="stmt"/>
-        <line num="65" count="2" type="stmt"/>
-        <line num="66" count="2" type="stmt"/>
-        <line num="67" count="2" type="stmt"/>
-        <line num="71" count="11" type="stmt"/>
+      <file name="breakpoint_match.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/breakpoint_match.ts">
+        <metrics statements="22" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
       </file>
-      <file name="click_outisde.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/click_outisde.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+      <file name="click_outisde.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/click_outisde.ts">
+        <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
       </file>
-      <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/index.ts">
+      <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="use_effect_run_once.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/use_effect_run_once.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="14" count="1" type="stmt"/>
+      <file name="use_effect_run_once.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/use_effect_run_once.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="14" count="0" type="stmt"/>
       </file>
-      <file name="use_effect_strict_mode.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/hooks/src/use_effect_strict_mode.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="11" methods="3" coveredmethods="3"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="24" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
+      <file name="use_effect_strict_mode.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/hooks/src/use_effect_strict_mode.ts">
+        <metrics statements="15" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
       </file>
     </package>
     <package name="network.src">
-      <metrics statements="23" coveredstatements="23" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
-      <file name="graphql_client.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/network/src/graphql_client.ts">
-        <metrics statements="23" coveredstatements="23" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="46" count="3" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="53" count="3" type="stmt"/>
-        <line num="54" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="55" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="56" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="63" count="2" type="stmt"/>
-        <line num="74" count="3" type="stmt"/>
-        <line num="75" count="3" type="stmt"/>
-        <line num="81" count="3" type="stmt"/>
-        <line num="82" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="83" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="84" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="85" count="1" type="stmt"/>
-        <line num="86" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="87" count="1" type="stmt"/>
-        <line num="89" count="1" type="stmt"/>
-        <line num="91" count="2" type="stmt"/>
+      <metrics statements="23" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="graphql_client.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/network/src/graphql_client.ts">
+        <metrics statements="23" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="83" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
       </file>
-      <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/network/src/index.ts">
+      <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/network/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="network.src.interfaces">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="graphql_data_source.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/network/src/interfaces/graphql_data_source.ts">
+      <file name="graphql_data_source.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/network/src/interfaces/graphql_data_source.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/network/src/interfaces/index.ts">
+      <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/network/src/interfaces/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="rest_data_source.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/network/src/interfaces/rest_data_source.ts">
+      <file name="rest_data_source.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/network/src/interfaces/rest_data_source.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="react_components.src">
-      <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="2"/>
-      <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/react_components/src/index.ts">
+      <metrics statements="8" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/react_components/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="safe_image.tsx" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/react_components/src/safe_image.tsx">
-        <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="2"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="cond" truecount="1" falsecount="1"/>
+      <file name="safe_image.tsx" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/react_components/src/safe_image.tsx">
+        <metrics statements="8" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
     </package>
     <package name="services.src">
-      <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
-      <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/services/src/index.ts">
+      <metrics statements="6" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/services/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="tag_manager_service.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/services/src/tag_manager_service.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="32" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="33" count="2" type="stmt"/>
+      <file name="tag_manager_service.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/services/src/tag_manager_service.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
       </file>
     </package>
     <package name="utils.src">
-      <metrics statements="34" coveredstatements="34" conditionals="12" coveredconditionals="12" methods="14" coveredmethods="14"/>
-      <file name="cookie.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/utils/src/cookie.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="30" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="47" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
+      <metrics statements="49" coveredstatements="21" conditionals="15" coveredconditionals="3" methods="21" coveredmethods="9"/>
+      <file name="cookie.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/cookie.ts">
+        <metrics statements="17" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="47" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
       </file>
-      <file name="index.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/utils/src/index.ts">
+      <file name="index.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="promise.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/utils/src/promise.ts">
-        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
+      <file name="promise.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/promise.ts">
+        <metrics statements="12" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
       </file>
-      <file name="yup_extended.ts" path="/home/runner/work/front_web_mrmilu/front_web_mrmilu/packages/utils/src/yup_extended.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="suspense_promise.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/suspense_promise.ts">
+        <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="6"/>
         <line num="6" count="3" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+      <file name="yup_extensions.ts" path="/Users/guido/Documents/Develop/front_web_mrmilu/packages/utils/src/yup_extensions.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
       </file>
     </package>
   </project>

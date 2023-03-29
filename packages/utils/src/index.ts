@@ -1,6 +1,9 @@
 import CookieUtils from "./cookie";
-import yup from "./yup_extended";
-import { makeCancelable, timeout, CancelablePromise } from "./promise";
+import type { CancelablePromise } from "./promise";
+import { makeCancelable, timeout } from "./promise";
+import type { SuspendedValue } from "./suspense_promise";
+import { wrapPromise, wrapPromisePending } from "./suspense_promise";
+import { loadYupExtensions } from "./yup_extensions";
 
-export { CookieUtils, makeCancelable, timeout, yup };
-export type { CancelablePromise };
+export { CookieUtils, makeCancelable, timeout, loadYupExtensions, wrapPromise, wrapPromisePending };
+export type { CancelablePromise, SuspendedValue };
