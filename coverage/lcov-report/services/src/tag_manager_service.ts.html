@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -115,23 +115,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,12 +151,12 @@ declare global {
  * Google tag manager service for sending events to data layer
  */
 export default class TagManagerService {
-  private readonly dataLayer: Array&lt;unknown&gt; | null = <span class="cstat-no" title="statement not covered" >null;</span>
+  private readonly dataLayer: Array&lt;unknown&gt; | null = null;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
-<span class="cstat-no" title="statement not covered" >    if (typeof window !== "undefined") {</span>
-<span class="cstat-no" title="statement not covered" >      if (!window.dataLayer) <span class="cstat-no" title="statement not covered" >window.dataLayer = window.dataLayer || [];</span></span>
-<span class="cstat-no" title="statement not covered" >      this.dataLayer = window.dataLayer;</span>
+  constructor() {
+    if (typeof window !== "undefined") {
+      if (!window.dataLayer) window.dataLayer = window.dataLayer || [];
+      this.dataLayer = window.dataLayer;
     }
   }
 &nbsp;
@@ -165,9 +165,9 @@ export default class TagManagerService {
    * @param name
    * @param parameters
    */
-<span class="fstat-no" title="function not covered" >  se</span>ndEvent(name: string, parameters?: Record&lt;string, string&gt;): void {
-<span class="cstat-no" title="statement not covered" >    if (this.dataLayer) {</span>
-<span class="cstat-no" title="statement not covered" >      this.dataLayer.push({ event: name, ...parameters });</span>
+  sendEvent(name: string, parameters?: Record&lt;string, string&gt;): void {
+    if (this.dataLayer) {
+      this.dataLayer.push({ event: name, ...parameters });
     }
   }
 }
@@ -178,7 +178,7 @@ export default class TagManagerService {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-29T14:02:00.005Z
+                at 2023-03-29T14:34:15.294Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

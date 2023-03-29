@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -105,17 +105,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,19 +134,19 @@ export interface SafeImageProps extends DetailedHTMLProps&lt;ImgHTMLAttributes&l
 /**
  * Image that shows `placeholderImage` if `src` is empty or invalid
  */
-export default function <span class="fstat-no" title="function not covered" >SafeImage(</span>{ src, placeholderSrc, alt, ...props }: SafeImageProps) {
-  const [invalid, setInvalid] = <span class="cstat-no" title="statement not covered" >useState(false);</span> // Controls whether current src is invalid
+export default function SafeImage({ src, placeholderSrc, alt, ...props }: SafeImageProps) {
+  const [invalid, setInvalid] = useState(false); // Controls whether current src is invalid
 &nbsp;
-  const prevSrc = <span class="cstat-no" title="statement not covered" >useRef(src);</span>
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (prevSrc.current !== src) {</span>
+  const prevSrc = useRef(src);
+  useEffect(() =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (prevSrc.current !== src) {
 <span class="cstat-no" title="statement not covered" >      setInvalid(false); </span>// if src changes, the new src might not be invalid.
 <span class="cstat-no" title="statement not covered" >      prevSrc.current = src;</span>
     }
   }, [src]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return &lt;img</span>
-    src={invalid ? placeholderSrc : (src || placeholderSrc)} // If `src` is empty or invalid, show `placeholderSrc`
+  return &lt;img
+    src={invalid ? <span class="branch-0 cbranch-no" title="branch not covered" >placeholderSrc </span>: (src || placeholderSrc)} // If `src` is empty or invalid, show `placeholderSrc`
     onError={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setInvalid(true)}</span>
     alt={alt}
     {...props}
@@ -160,7 +160,7 @@ export default function <span class="fstat-no" title="function not covered" >Saf
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-29T14:02:00.005Z
+                at 2023-03-29T14:34:15.294Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
