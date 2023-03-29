@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/12</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/15</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,26 +103,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,26 +136,26 @@ import { useEffect, useRef } from "react";
  * useEffect hook for React 18 in strict mode that executes only ones in development mode
  * @param effect
  */
-const useEffectStrictMode = (effect: EffectCallback) =&gt; {
-  const runEffectOnce = useRef(false);
-  const runCleanupOnce = useRef(false);
-  const cleanupDestructor = useRef&lt;ReturnType&lt;EffectCallback&gt; | null&gt;(null);
+const useEffectStrictMode = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>ffect: EffectCallback) =&gt; {</span>
+  const runEffectOnce = <span class="cstat-no" title="statement not covered" >useRef(false);</span>
+  const runCleanupOnce = <span class="cstat-no" title="statement not covered" >useRef(false);</span>
+  const cleanupDestructor = <span class="cstat-no" title="statement not covered" >useRef&lt;ReturnType&lt;EffectCallback&gt; | null&gt;(null);</span>
 &nbsp;
-  useEffect(() =&gt; {
-    if (!runEffectOnce.current) {
-      runEffectOnce.current = true;
-      const destructor = effect();
-      <span class="missing-if-branch" title="else path not taken" >E</span>if (destructor) cleanupDestructor.current = destructor;
+<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (!runEffectOnce.current) {</span>
+<span class="cstat-no" title="statement not covered" >      runEffectOnce.current = true;</span>
+      const destructor = <span class="cstat-no" title="statement not covered" >effect();</span>
+<span class="cstat-no" title="statement not covered" >      if (destructor) <span class="cstat-no" title="statement not covered" >cleanupDestructor.current = destructor;</span></span>
     }
 &nbsp;
-    return () =&gt; {
-      if (process.env.NODE_ENV === "production" &amp;&amp; cleanupDestructor.current) {
-        cleanupDestructor.current();
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (process.env.NODE_ENV === "production" &amp;&amp; cleanupDestructor.current) {</span>
+<span class="cstat-no" title="statement not covered" >        cleanupDestructor.current();</span>
       } else {
-        if (runCleanupOnce.current &amp;&amp; cleanupDestructor.current) {
-          cleanupDestructor.current();
+<span class="cstat-no" title="statement not covered" >        if (runCleanupOnce.current &amp;&amp; cleanupDestructor.current) {</span>
+<span class="cstat-no" title="statement not covered" >          cleanupDestructor.current();</span>
         }
-        runCleanupOnce.current = true;
+<span class="cstat-no" title="statement not covered" >        runCleanupOnce.current = true;</span>
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -169,7 +169,7 @@ export default useEffectStrictMode;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-20T06:02:59.154Z
+                at 2023-03-29T14:02:00.005Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
