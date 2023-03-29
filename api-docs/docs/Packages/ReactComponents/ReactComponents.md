@@ -16,7 +16,7 @@
 
 ### SafeImage
 
-▸ **SafeImage**(`__namedParameters`): `Element`
+▸ **SafeImage**(`«destructured»`): `Element`
 
 Image that shows `placeholderImage` if `src` is empty or invalid
 
@@ -24,7 +24,7 @@ Image that shows `placeholderImage` if `src` is empty or invalid
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`SafeImageProps`](interfaces/SafeImageProps.md) |
+| `«destructured»` | [`SafeImageProps`](interfaces/SafeImageProps.md) |
 
 #### Returns
 
@@ -32,4 +32,4 @@ Image that shows `placeholderImage` if `src` is empty or invalid
 
 #### Defined in
 
-[safe_image.tsx:12](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/react_components/src/safe_image.tsx#L12)
+[safe_image.tsx:12](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/react_components/src/safe_image.tsx#L12)

@@ -11,13 +11,31 @@
 ### Interfaces
 
 - [CancelablePromise](interfaces/CancelablePromise.md)
+- [SuspendedValue](interfaces/SuspendedValue.md)
 
 ### Functions
 
+- [loadYupExtensions](Utils.md#loadyupextensions)
 - [makeCancelable](Utils.md#makecancelable)
 - [timeout](Utils.md#timeout)
+- [wrapPromise](Utils.md#wrappromise)
+- [wrapPromisePending](Utils.md#wrappromisepending)
 
 ## Functions
+
+### loadYupExtensions
+
+▸ **loadYupExtensions**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[yup_extensions.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/yup_extensions.ts#L11)
+
+___
 
 ### makeCancelable
 
@@ -43,7 +61,7 @@ Function that lets you cancel then and catch chain of a promise.
 
 #### Defined in
 
-[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/utils/src/promise.ts#L23)
+[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/promise.ts#L23)
 
 ___
 
@@ -65,4 +83,50 @@ Promised based setTimeout
 
 #### Defined in
 
-[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/utils/src/promise.ts#L5)
+[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/promise.ts#L5)
+
+___
+
+### wrapPromise
+
+▸ **wrapPromise**<`T`\>(`promise`): [`SuspendedValue`](interfaces/SuspendedValue.md)<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `promise` | `Promise`<`T`\> |
+
+#### Returns
+
+[`SuspendedValue`](interfaces/SuspendedValue.md)<`T`\>
+
+#### Defined in
+
+[suspense_promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/suspense_promise.ts#L5)
+
+___
+
+### wrapPromisePending
+
+▸ **wrapPromisePending**<`T`\>(): [`SuspendedValue`](interfaces/SuspendedValue.md)<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Returns
+
+[`SuspendedValue`](interfaces/SuspendedValue.md)<`T`\>
+
+#### Defined in
+
+[suspense_promise.ts:34](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/suspense_promise.ts#L34)

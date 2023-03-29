@@ -47,7 +47,7 @@ link to yalc repo even if you have already added the real package to your `packa
 ```json
 {
   "dependencies": {
-    "@front_web_mrmilu/services": "mrmilu/front_web_mrmilu#@front_web_mrmilu/services-v1.0.1"
+    "@front_web_mrmilu/services": "1.4.0"
   }
 }
 ```

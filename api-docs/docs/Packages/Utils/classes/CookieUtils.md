@@ -43,7 +43,7 @@ Generates an expiration date based in a amount of days
 
 #### Defined in
 
-[cookie.ts:47](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/utils/src/cookie.ts#L47)
+[cookie.ts:47](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/cookie.ts#L47)
 
 ___
 
@@ -65,7 +65,7 @@ Erases cookie from document
 
 #### Defined in
 
-[cookie.ts:39](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/utils/src/cookie.ts#L39)
+[cookie.ts:39](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/cookie.ts#L39)
 
 ___
 
@@ -80,7 +80,7 @@ Gets cookie from document or provided cookie string
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `name` | `string` | `undefined` |
-| `cookies` | `string` | `document.cookie` |
+| `cookies?` | `string` | `document.cookie` |
 
 #### Returns
 
@@ -88,7 +88,7 @@ Gets cookie from document or provided cookie string
 
 #### Defined in
 
-[cookie.ts:24](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/utils/src/cookie.ts#L24)
+[cookie.ts:24](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/cookie.ts#L24)
 
 ___
 
@@ -112,4 +112,4 @@ Sets cookie in document
 
 #### Defined in
 
-[cookie.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/14b2abf/packages/utils/src/cookie.ts#L11)
+[cookie.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/cookie.ts#L11)
