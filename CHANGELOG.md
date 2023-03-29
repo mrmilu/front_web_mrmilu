@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.6.0...v2.0.0) (2023-03-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **root:** updated yup to 1.0
+
+### Features
+
+* **root:** updated dependencies ([372beee](https://github.com/mrmilu/front_web_mrmilu/commit/372beeed8cb6654e6da085268bc079b46e0c6bb9))
+* **root:** updated preconstruct ([089126d](https://github.com/mrmilu/front_web_mrmilu/commit/089126d1f64a0d9ff17bd5a1b27a869de36393de))
+* **root:** updated yup to 1.0 ([45ae0ea](https://github.com/mrmilu/front_web_mrmilu/commit/45ae0eadce67ee069805c621b316465411f97590))
+* **utils:** added wrapp promise for suspense usage ([1e0e3e9](https://github.com/mrmilu/front_web_mrmilu/commit/1e0e3e985c4d00c651175b139ec2288c3de406c8))
+* **utils:** updated yup 1.0 usage ([12fa223](https://github.com/mrmilu/front_web_mrmilu/commit/12fa2231d25eb523873027e3d2863cbb55cd0df4))
+
+
+### Bug Fixes
+
+* **utils:** fix yup declarations export ([0f1f731](https://github.com/mrmilu/front_web_mrmilu/commit/0f1f731781f2abe34cc3d1c9fe14ae0f6d90e706))
+* **utils:** fixed yup extensions export ([2ffa55e](https://github.com/mrmilu/front_web_mrmilu/commit/2ffa55e5bded5f500f6103d8637aaba9268d3622))
+* **utils:** fixed yup test ([92d3c55](https://github.com/mrmilu/front_web_mrmilu/commit/92d3c5557669b417fc05aa0c764904c179696baa))
+
 ## [1.6.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.5.0...v1.6.0) (2023-02-20)
 
 ### Features
