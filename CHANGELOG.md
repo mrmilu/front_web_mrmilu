@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/mrmilu/front_web_mrmilu/compare/v2.0.0...v2.1.0) (2023-05-25)
+
+
+### Features
+
+* **utils:** added readRaw to suspense_promise.ts ([4f11669](https://github.com/mrmilu/front_web_mrmilu/commit/4f1166989512188a8275336ab64303e986ac3c03))
+
 ## [2.0.0](https://github.com/mrmilu/front_web_mrmilu/compare/v1.6.0...v2.0.0) (2023-03-29)
 
 
