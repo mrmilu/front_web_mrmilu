@@ -12,6 +12,12 @@ describe("suspense promise", () => {
       expect(readValue).toBe("foo");
     });
 
+    it("should wrap promise and read raw correct value", async () => {
+      const wrappedPromise = await wrapPromise(Promise.resolve("foo"));
+      const readValue = wrappedPromise.readRaw();
+      expect(readValue).toBe("foo");
+    });
+
     it("should wrap promise and reject on read", async () => {
       const wrappedPromise = await wrapPromise(Promise.reject("bar"));
       try {
@@ -43,6 +49,7 @@ describe("suspense promise", () => {
       try {
         const wrappedPromise = await wrapPromisePending();
         wrappedPromise.read();
+        wrappedPromise.readRaw();
       } catch (e) {
         expect(util.inspect(e)).toInclude("undefined");
       }
