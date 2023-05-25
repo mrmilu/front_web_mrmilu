@@ -1,0 +1,459 @@
+diff --git a/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js b/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js
+index b66573f..65c0253 100644
+--- a/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js
++++ b/node_modules/@preconstruct/cli/cli/dist/cli.cjs.dev.js
+@@ -38,6 +38,7 @@ var estreeWalker = require('estree-walker');
+ var isReference = _interopDefault(require('is-reference'));
+ var MagicString = _interopDefault(require('magic-string'));
+ var ms = _interopDefault(require('ms'));
++const exec = util.promisify(require('child_process').exec);
+ 
+ let limit = pLimit(1); // there might be a simpler solution to this than using dataloader but it works so ¯\_(ツ)_/¯
+ 
+@@ -823,11 +824,11 @@ function getPlainEntrypointContent(pkg, fields, entrypointDir, indent) {
+ function createEntrypoints(pkg, descriptors) {
+   let fields = getFieldsUsedInEntrypoints(descriptors);
+   return Promise.all(descriptors.map(async ({
+-    filename,
+-    contents,
+-    hasAccepted,
+-    sourceFile
+-  }) => {
++                                              filename,
++                                              contents,
++                                              hasAccepted,
++                                              sourceFile
++                                            }) => {
+     if (contents === undefined) {
+       if (!hasAccepted) {
+         const entrypointName = getEntrypointName(pkg, path__default.dirname(filename));
+@@ -1416,7 +1417,7 @@ function validateEntrypoint(entrypoint, log) {
+       }
+ 
+       fatalErrors.push( // they're both fixable but we don't want the message about running preconstruct fix if they're using the old dist file names since we have a custom message
+-      new (isUsingOldDistFilenames ? FatalError : FixableError)(errors.invalidField(field, entrypoint.json[field], validFieldsForEntrypoint[field](entrypoint)), entrypoint.name));
++          new (isUsingOldDistFilenames ? FatalError : FixableError)(errors.invalidField(field, entrypoint.json[field], validFieldsForEntrypoint[field](entrypoint)), entrypoint.name));
+     }
+ 
+     if (field === "umd:main" && !isUmdNameSpecified(entrypoint)) {
+@@ -1786,10 +1787,10 @@ async function getDeclarations(typescript, program, normalizedPkgDir, projectDir
+       let resolvedModule = resolveModuleName(text, dep);
+ 
+       if (resolvedModule && !allDeps.has(resolvedModule.resolvedFileName) && !resolvedModule.isExternalLibraryImport && resolvedModule.resolvedFileName.includes(normalizedPkgDir) && // you can import a .json file if you have resolveJsonModule: true in your tsconfig
+-      // but you can't generate declarations for it(which seems fine and good i think?)
+-      // and just ignoring imports to them seems fine because from what i can tell
+-      // typescript inlines the types for them if the json file import is used in the files exports
+-      !resolvedModule.resolvedFileName.endsWith(".json")) {
++          // but you can't generate declarations for it(which seems fine and good i think?)
++          // and just ignoring imports to them seems fine because from what i can tell
++          // typescript inlines the types for them if the json file import is used in the files exports
++          !resolvedModule.resolvedFileName.endsWith(".json")) {
+         allDeps.add(resolvedModule.resolvedFileName);
+       }
+     }
+@@ -1852,11 +1853,11 @@ function typescriptDeclarations(pkg) {
+       // and some .js entrypoints with a .d.ts
+ 
+       if (!pkg.entrypoints.some(({
+-        source
+-      }) => isTsPath(source))) {
++                                   source
++                                 }) => isTsPath(source))) {
+         const hasSomeDtsEntrypoints = (await Promise.all(pkg.entrypoints.map(async ({
+-          source
+-        }) => {
++                                                                                      source
++                                                                                    }) => {
+           try {
+             await fs__default.stat(source.replace(/\.jsx?/, ".d.ts"));
+           } catch (err) {
+@@ -2129,12 +2130,12 @@ async function dev(projectDir) {
+               const filepath = path__default.join(entrypoint.package.directory, getDistFilenameForConditions(entrypoint, conditions).replace(/\.js$/, ".mjs"));
+               const importPath = `./${getDistFilenameForConditions(entrypoint, conditions)}`;
+               return Promise.all([fs.writeFile(filepath, mjsTemplate( // the * won't really do anything right now
+-              // since cjs-module-lexer won't find anything
+-              // but that could be fixed by adding fake things
+-              // to the .cjs.js file that look like exports to cjs-module-lexer
+-              // but don't actually add the exports at runtime like esbuild does
+-              // (it would require re-running dev when adding new named exports)
+-              hasDefaultExport ? ["default", "*other"] : ["*other"], importPath, filepath)), hasDefaultExport && fs.writeFile(getJsDefaultForMjsFilepath(filepath), jsDefaultForMjsTemplate(importPath))]);
++                  // since cjs-module-lexer won't find anything
++                  // but that could be fixed by adding fake things
++                  // to the .cjs.js file that look like exports to cjs-module-lexer
++                  // but don't actually add the exports at runtime like esbuild does
++                  // (it would require re-running dev when adding new named exports)
++                  hasDefaultExport ? ["default", "*other"] : ["*other"], importPath, filepath)), hasDefaultExport && fs.writeFile(getJsDefaultForMjsFilepath(filepath), jsDefaultForMjsTemplate(importPath))]);
+             }));
+           }
+         }
+@@ -2149,12 +2150,12 @@ async function dev(projectDir) {
+           const filepath = path__default.join(entrypoint.package.directory, getExportsImportUnwrappingDefaultOutputPath(entrypoint));
+           const importPath = `./${getBaseDistFilename(entrypoint, "cjs")}`;
+           return Promise.all([fs.writeFile(filepath, mjsTemplate( // the * won't really do anything right now
+-          // since cjs-module-lexer won't find anything
+-          // but that could be fixed by adding fake things
+-          // to the .cjs.js file that look like exports to cjs-module-lexer
+-          // but don't actually add the exports at runtime like esbuild does
+-          // (it would require re-running dev when adding new named exports)
+-          hasDefaultExport ? ["default", "*other"] : ["*other"], importPath, filepath)), hasDefaultExport ? fs.writeFile(getJsDefaultForMjsFilepath(filepath), jsDefaultForMjsTemplate(importPath)) : undefined]);
++              // since cjs-module-lexer won't find anything
++              // but that could be fixed by adding fake things
++              // to the .cjs.js file that look like exports to cjs-module-lexer
++              // but don't actually add the exports at runtime like esbuild does
++              // (it would require re-running dev when adding new named exports)
++              hasDefaultExport ? ["default", "*other"] : ["*other"], importPath, filepath)), hasDefaultExport ? fs.writeFile(getJsDefaultForMjsFilepath(filepath), jsDefaultForMjsTemplate(importPath)) : undefined]);
+         }));
+       }
+ 
+@@ -2254,7 +2255,7 @@ function nodeDevProdEntry() {
+         let mainEntrySource = `'use strict';
+ 
+ if (${// tricking static analysis is fun...
+-        "process" + ".env.NODE_ENV"} === "production") {
++            "process" + ".env.NODE_ENV"} === "production") {
+   module.exports = require("./${path__default.basename(getProdPath(mainFieldPath))}");
+ } else {
+   module.exports = require("./${path__default.basename(getDevPath(mainFieldPath))}");
+@@ -2341,6 +2342,7 @@ const resolvedBabelCore = require.resolve("@babel/core");
+ const babelHelpers = require(resolveFrom(resolvedBabelCore, "@babel/helpers"));
+ 
+ const babelGenerator = require(resolveFrom(resolvedBabelCore, "@babel/generator"));
++const mod = require("@babel/core");
+ 
+ const babelHelpersModuleStart = "\0rollupPluginBabelHelpers/"; // from https://github.com/babel/babel/blob/9808d2566e6a2b2d9e4c7890d8efbc9af180c683/packages/babel-core/src/transformation/file/file.js#L129-L164
+ // the main difference being that it uses a newer version of semver
+@@ -2355,10 +2357,10 @@ function babelRuntimeVersionRangeHasHelper(name, versionRange) {
+ }
+ 
+ let rollupPluginBabel = ({
+-  cwd,
+-  reportTransformedFile,
+-  babelRuntime
+-}) => {
++                           cwd,
++                           reportTransformedFile,
++                           babelRuntime
++                         }) => {
+   // semver.intersects() has some surprising behavior with comparing ranges
+   // with pre-release versions. We add '^' to ensure that we are always
+   // comparing ranges with ranges, which sidesteps this logic.
+@@ -2413,10 +2415,10 @@ let rollupPluginBabel = ({
+       if (helpersSourceDescription === undefined) {
+         const helperNodes = babelHelpers.get(helperName).nodes;
+         let helpers = babelGenerator.default( // @ts-ignore
+-        {
+-          type: "Program",
+-          body: helperNodes
+-        }).code;
++            {
++              type: "Program",
++              body: helperNodes
++            }).code;
+         helpersSourceDescription = {
+           ast: this.parse(helpers, undefined),
+           code: helpers
+@@ -2515,8 +2517,8 @@ function terser(options) {
+ }
+ 
+ function inlineProcessEnvNodeEnv({
+-  sourceMap
+-}) {
++                                   sourceMap
++                                 }) {
+   return {
+     name: "inline-process-env-node-env-production",
+ 
+@@ -2659,8 +2661,8 @@ function _objectSpread$4(target) { for (var i = 1; i < arguments.length; i++) {
+ 
+ function _defineProperty$8(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+ function serverComponentsPlugin({
+-  sourceMap
+-}) {
++                                  sourceMap
++                                }) {
+   return {
+     name: "server-components",
+ 
+@@ -2879,7 +2881,7 @@ let getRollupConfig = (pkg, entrypoints, options, reportTransformedFile) => {
+     onwarn: warning => {
+       if (typeof warning === "string") {
+         warnings.add(`An unhandled Rollup error occurred: ${chalk.red( // @ts-ignore
+-        warning.toString())}`);
++            warning.toString())}`);
+         return;
+       }
+ 
+@@ -2888,24 +2890,24 @@ let getRollupConfig = (pkg, entrypoints, options, reportTransformedFile) => {
+         case "EMPTY_BUNDLE":
+         case "EVAL":
+         case "UNUSED_EXTERNAL_IMPORT":
+-          {
+-            break;
+-          }
++        {
++          break;
++        }
+ 
+         case "THIS_IS_UNDEFINED":
+-          {
+-            if (options.kind === "umd") {
+-              return;
+-            }
+-
+-            warnings.add(`"${normalizePath(path__default.relative(pkg.directory, warning.loc.file))}" used \`this\` keyword at the top level of an ES module. You can read more about this at ${warning.url} and fix this issue that has happened here:\n\n${warning.frame}\n`);
++        {
++          if (options.kind === "umd") {
+             return;
+           }
+ 
++          warnings.add(`"${normalizePath(path__default.relative(pkg.directory, warning.loc.file))}" used \`this\` keyword at the top level of an ES module. You can read more about this at ${warning.url} and fix this issue that has happened here:\n\n${warning.frame}\n`);
++          return;
++        }
++
+         default:
+-          {
+-            warnings.add(`An unhandled Rollup error occurred: ${chalk.red(warning.toString())}`);
+-          }
++        {
++          warnings.add(`An unhandled Rollup error occurred: ${chalk.red(warning.toString())}`);
++        }
+       }
+     },
+     plugins: [{
+@@ -2986,8 +2988,8 @@ const cjsDynamicImportPlugin = {
+   name: "cjs render dynamic import",
+ 
+   renderDynamicImport({
+-    format
+-  }) {
++                        format
++                      }) {
+     if (format !== "cjs") return;
+     return {
+       left: "import(",
+@@ -3209,9 +3211,9 @@ function writeOutputFile(outputFile, outputOptions) {
+ async function buildPackage(pkg) {
+   let configs = getRollupConfigs(pkg);
+   let outputs = await Promise.all(configs.map(async ({
+-    config,
+-    outputs
+-  }) => {
++                                                       config,
++                                                       outputs
++                                                     }) => {
+     let bundle = await rollup.rollup(config);
+     return Promise.all(outputs.map(async outputConfig => {
+       return {
+@@ -3292,7 +3294,7 @@ function relativePath(id) {
+   return path__default.relative(process.cwd(), id);
+ }
+ 
+-async function watchPackage(pkg) {
++async function watchPackage(pkg, onSuccessWatch) {
+   const _configs = getRollupConfigs(pkg);
+ 
+   let configs = _configs.map(config => {
+@@ -3310,36 +3312,53 @@ async function watchPackage(pkg) {
+   let startPromise = new Promise(resolve => {
+     startResolve = resolve;
+   });
+-  watcher.on("event", event => {
++  watcher.on("event", async event => {
+     // https://github.com/rollup/rollup/blob/aed954e4e6e8beabd47268916ff0955fbb20682d/bin/src/run/watch.ts#L71-L115
+     switch (event.code) {
+       case "ERROR":
+-        {
+-          reject(event.error);
+-          break;
+-        }
++      {
++        reject(event.error);
++        break;
++      }
+ 
+       case "START":
+         startResolve();
+         break;
+ 
+       case "BUNDLE_START":
+-        {
+-          info(chalk.cyan(`bundles ${chalk.bold(typeof event.input === "string" ? relativePath(event.input) : Array.isArray(event.input) ? event.input.map(relativePath).join(", ") : event.input === undefined ? "" : Object.values(event.input) // @ts-ignore
+-          .map(relativePath).join(", "))} → ${chalk.bold(event.output.map(relativePath).join(", "))}...`), pkg.name);
+-          break;
+-        }
++      {
++        info(chalk.cyan(`bundles ${chalk.bold(typeof event.input === "string" ? relativePath(event.input) : Array.isArray(event.input) ? event.input.map(relativePath).join(", ") : event.input === undefined ? "" : Object.values(event.input) // @ts-ignore
++            .map(relativePath).join(", "))} → ${chalk.bold(event.output.map(relativePath).join(", "))}...`), pkg.name);
++        break;
++      }
+ 
+       case "BUNDLE_END":
+-        {
+-          info(chalk.green(`created ${chalk.bold(event.output.map(relativePath).join(", "))} in ${chalk.bold(ms(event.duration))}`), pkg.name);
+-          break;
+-        }
++      {
++        info(chalk.green(`created ${chalk.bold(event.output.map(relativePath).join(", "))} in ${chalk.bold(ms(event.duration))}`), pkg.name);
++        break;
++      }
+ 
+       case "END":
+-        {
+-          info("waiting for changes...", pkg.name);
++      {
++        info("waiting for changes...", pkg.name);
++
++        try {
++          let onSuccessCommand = onSuccessWatch
++          const hasPackageVar = onSuccessWatch.includes("%pkg%")
++          if (hasPackageVar) {
++            onSuccessCommand = onSuccessWatch.replace("%pkg%", pkg.name)
++          }
++
++          const {stdout, stderr} = await exec(onSuccessCommand);
++          if (stdout) info(stdout, pkg.name)
++          if (stderr) error(stderr, pkg.name)
++        } catch (e) {
++          error("error triggering onSuccess flag", pkg.name)
++          console.log(e)
++
++          process.exit(1)
+         }
++      }
+     }
+   });
+   return {
+@@ -3348,12 +3367,12 @@ async function watchPackage(pkg) {
+   };
+ }
+ 
+-async function retryableWatch(pkg, getPromises, depth) {
++async function retryableWatch(pkg, getPromises, depth, onSuccessWatch) {
+   try {
+     let {
+       error,
+       start
+-    } = await watchPackage(pkg);
++    } = await watchPackage(pkg, onSuccessWatch);
+ 
+     if (depth === 0) {
+       getPromises({
+@@ -3365,7 +3384,7 @@ async function retryableWatch(pkg, getPromises, depth) {
+   } catch (err) {
+     if (err instanceof Promise) {
+       await err;
+-      await retryableWatch(pkg, getPromises, depth + 1);
++      await retryableWatch(pkg, getPromises, depth + 1, onSuccessWatch);
+       return;
+     }
+ 
+@@ -3373,22 +3392,22 @@ async function retryableWatch(pkg, getPromises, depth) {
+   }
+ }
+ 
+-async function build$1(directory) {
++async function build$1(directory, onSuccessWatch) {
+   createWorker();
+   let project = await Project.create(directory);
+   validateProject(project);
+   await cleanProjectBeforeBuild(project);
+   let startCount = 0;
+   await Promise.all(project.packages.map(pkg => retryableWatch(pkg, async ({
+-    start
+-  }) => {
++                                                                             start
++                                                                           }) => {
+     await start;
+     startCount++;
+ 
+     if (startCount === project.packages.length) {
+       success(successes.startedWatching);
+     }
+-  }, 0)));
++  }, 0, onSuccessWatch)));
+ }
+ 
+ let keys$1 = Object.keys;
+@@ -3476,7 +3495,8 @@ async function fix(directory) {
+ 
+ process["e" + "nv"].NODE_ENV = "production";
+ let {
+-  input
++  input,
++  flags,
+ } = meow(`
+ Usage
+   $ preconstruct [command]
+@@ -3499,45 +3519,45 @@ class CommandNotFoundError extends Error {}
+   if (input.length === 1) {
+     switch (input[0]) {
+       case "init":
+-        {
+-          await init(process.cwd());
+-          return;
+-        }
++      {
++        await init(process.cwd());
++        return;
++      }
+ 
+       case "validate":
+-        {
+-          await validate(process.cwd());
+-          return;
+-        }
++      {
++        await validate(process.cwd());
++        return;
++      }
+ 
+       case "build":
+-        {
+-          await build(process.cwd());
+-          return;
+-        }
++      {
++        await build(process.cwd());
++        return;
++      }
+ 
+       case "watch":
+-        {
+-          await build$1(process.cwd());
+-          return;
+-        }
++      {
++        await build$1(process.cwd(), flags.onSuccess);
++        return;
++      }
+ 
+       case "fix":
+-        {
+-          await fix(process.cwd());
+-          return;
+-        }
++      {
++        await fix(process.cwd());
++        return;
++      }
+ 
+       case "dev":
+-        {
+-          await dev(process.cwd());
+-          return;
+-        }
++      {
++        await dev(process.cwd());
++        return;
++      }
+ 
+       default:
+-        {
+-          throw new CommandNotFoundError();
+-        }
++      {
++        throw new CommandNotFoundError();
++      }
+     }
+   } else {
+     throw new CommandNotFoundError();

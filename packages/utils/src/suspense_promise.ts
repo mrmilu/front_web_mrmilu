@@ -1,5 +1,8 @@
 export interface SuspendedValue<T> {
+  // Reads value so Suspense can handle it
   read(): T;
+  // Reads value without throwing error
+  readRaw(): T | undefined;
 }
 
 export function wrapPromise<T>(promise: Promise<T>): SuspendedValue<T> {
@@ -28,12 +31,14 @@ export function wrapPromise<T>(promise: Promise<T>): SuspendedValue<T> {
     }
   };
 
-  return { read };
+  const readRaw = () => response;
+
+  return { read, readRaw };
 }
 
 export function wrapPromisePending<T>(): SuspendedValue<T> {
   const read = () => {
     throw Promise.resolve();
   };
-  return { read };
+  return { read, readRaw: () => undefined };
 }
