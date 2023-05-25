@@ -9,10 +9,17 @@ across any Mr.Milú project.
 
 ### Usage
 
-Add [yalc](https://github.com/wclr/yalc) local repository to your computer if you don't already have it
+Install [NVM](https://github.com/nvm-sh/nvm) and use the node version specified in `.nvmrc` file with the following command:
 
 ```shell
-yarn global add yalc
+nvm use
+corepack-enable # enable yarn 3.*
+```
+
+Add [yalc](https://github.com/wclr/yalc) globally to your computer if you don't already have it
+
+```shell
+npm i yalc -g
 ```
 
 Install dependencies
@@ -46,7 +53,7 @@ link to yalc repo even if you have already added the real package to your `packa
 ```json
 {
   "dependencies": {
-    "@front_web_mrmilu/services": "1.4.0"
+    "@front_web_mrmilu/services": "2.0.0"
   }
 }
 ```
