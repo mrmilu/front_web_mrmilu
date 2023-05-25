@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[async_state.ts:7](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/hooks/src/async_state.ts#L7)
+[async_state.ts:7](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/hooks/src/async_state.ts#L7)
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 #### Defined in
 
-[async_state.ts:6](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/hooks/src/async_state.ts#L6)
+[async_state.ts:6](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/hooks/src/async_state.ts#L6)

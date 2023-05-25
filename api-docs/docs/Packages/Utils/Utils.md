@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[yup_extensions.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/yup_extensions.ts#L11)
+[yup_extensions.ts:11](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/yup_extensions.ts#L11)
 
 ___
 
@@ -61,7 +61,7 @@ Function that lets you cancel then and catch chain of a promise.
 
 #### Defined in
 
-[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/promise.ts#L23)
+[promise.ts:23](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/promise.ts#L23)
 
 ___
 
@@ -83,7 +83,7 @@ Promised based setTimeout
 
 #### Defined in
 
-[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/promise.ts#L5)
+[promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/promise.ts#L5)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[suspense_promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/suspense_promise.ts#L5)
+[suspense_promise.ts:8](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/suspense_promise.ts#L8)
 
 ___
 
@@ -129,4 +129,4 @@ ___
 
 #### Defined in
 
-[suspense_promise.ts:34](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/suspense_promise.ts#L34)
+[suspense_promise.ts:39](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/suspense_promise.ts#L39)

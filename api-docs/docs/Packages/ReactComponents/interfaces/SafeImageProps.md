@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[safe_image.tsx:6](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/react_components/src/safe_image.tsx#L6)
+[safe_image.tsx:6](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/react_components/src/safe_image.tsx#L6)

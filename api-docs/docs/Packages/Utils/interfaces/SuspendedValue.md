@@ -13,6 +13,7 @@
 ### Methods
 
 - [read](SuspendedValue.md#read)
+- [readRaw](SuspendedValue.md#readraw)
 
 ## Methods
 
@@ -26,4 +27,18 @@
 
 #### Defined in
 
-[suspense_promise.ts:2](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/utils/src/suspense_promise.ts#L2)
+[suspense_promise.ts:3](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/suspense_promise.ts#L3)
+
+___
+
+### readRaw
+
+▸ **readRaw**(): `T`
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[suspense_promise.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/utils/src/suspense_promise.ts#L5)

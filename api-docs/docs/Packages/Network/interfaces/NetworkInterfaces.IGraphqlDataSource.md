@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[interfaces/graphql_data_source.ts:4](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/network/src/interfaces/graphql_data_source.ts#L4)
+[interfaces/graphql_data_source.ts:4](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/network/src/interfaces/graphql_data_source.ts#L4)
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 #### Defined in
 
-[interfaces/graphql_data_source.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/f39c3e6/packages/network/src/interfaces/graphql_data_source.ts#L5)
+[interfaces/graphql_data_source.ts:5](https://github.com/mrmilu/front_web_mrmilu/blob/a9bdea5/packages/network/src/interfaces/graphql_data_source.ts#L5)
